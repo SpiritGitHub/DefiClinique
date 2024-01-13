@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.Date;
+import java.util.List;
 
 
 @Entity
@@ -32,8 +33,8 @@ public class DossiersMedicaux {
     @Column(name = "allergies")
     private String allergies;
 
-    @Column(name = "traitements_en_cours")
-    private String traitementsEnCours;
+    @Column(name = "medicament_actuel")
+    private String MedicamentActuel;
 
     @Column(name = "historique_visites")
     private String historiqueVisites;
@@ -45,6 +46,8 @@ public class DossiersMedicaux {
     @Column(name = "date_mise_a_jour")
     private Date dateMiseAJour;
 
+    @OneToMany(mappedBy = "dossierMedical")
+    private List<Consultation> consultations;
 
 }
 
