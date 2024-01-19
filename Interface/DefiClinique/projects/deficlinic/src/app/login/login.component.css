@@ -1,0 +1,140 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url('/assets/docteur.jpg'); /* Assurez-vous que le chemin est correct */
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .header {
+    text-align: center;
+    margin-bottom: 20px; /* Ajustez selon l'espacement souhaité */
+  }
+  
+  .logo {
+    font-weight: bold;
+    color: white; /* Couleur blanche pour le logo */
+  }
+  
+  .app-name {
+    font-size: 1.5rem; /* Taille de police accrue pour le nom de l'application */
+    color: white; /* Couleur blanche pour le nom de l'application */
+  }
+  
+  .form-container {
+    background-color: black; /* Fond noir translucide pour le conteneur du formulaire */
+    padding: 2rem;
+    width: 100%; /* Largeur ajustée pour le formulaire */
+    max-width: 400px; /* Largeur maximale pour la responsive design */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Ombre portée pour le conteneur */
+    color: white;
+    font-family: 'Arial', sans-serif; /* Choisissez la police qui correspond le mieux */
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  .input-group {
+    display: flex;
+    width: 10%;
+    /*justify-content: space-between;*/
+  }
+  
+  input {
+    margin-bottom: 1rem;
+    padding: 1rem; /* Padding ajusté pour correspondre à l'image */
+    background: rgba(255, 255, 255, 0.2); /* Fond légèrement translucide */
+    color: white; /* Texte blanc */
+    border-radius: 10px; /* Rayon de bordure arrondi */
+    border: 1px solid rgba(255, 255, 255, 0.4); /* Bordure subtile */
+   
+  }
+  /* login.component.css */
+.input-container {
+    position: relative;
+  }
+  
+  .input-container .icon {
+    position: absolute;
+    right: 10px;
+    top: 15px;
+    color: #555;
+  }
+  
+  .input-container input {
+    padding-left: 30px;
+    /* Vos autres styles d'input ici */
+  }
+  
+  .button-group {
+    display: flex;
+    justify-content: space-between;
+    flex: auto;
+  }
+  .input-group input:first-child {
+    margin-right: 10px; /* Espacement plus grand pour le premier input */
+  }
+  
+  .input-group input:last-child {
+    margin-right: -0.5; /* Pas de marge pour le dernier input */
+  }
+  .input-icon-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .icon {
+    position: absolute;
+    left: 10px; /* Adjust the value as needed */
+    color: #ffffff;
+  }
+  
+  .input-icon-container input {
+    padding-left: 30px; /* Make room for the icon */
+    width: 100%;
+    /* Rest of your input styles... */
+  }
+  
+  
+  button {
+    padding: 1rem;
+    border: none;
+    border-radius: 20px; /* Rayon de bordure arrondi */
+    margin-top: 1rem;
+    font-weight: bold; /* Texte en gras */
+    cursor: pointer; /* Curseur pointeur pour indiquer l'interactivité */
+    border-radius: 20px; /* Rayon de bordure arrondi */
+
+  }
+  
+  .primary-button {
+    background-color: #0b335e; /* Bleu, par exemple pour le bouton 'Créer un compte' */
+    color: white;
+  }
+  
+  .secondary-button {
+    background-color: #6c757d; /* Gris, par exemple pour le bouton 'Changer de méthode' */
+    color: white;
+  }
+  
+  a {
+    color: #007bff; /* Assortir à la couleur du bouton principal */
+    text-decoration: none; /* Pas de soulignement */
+  }
+  
+  /* Ajouter un hover effet pour les boutons */
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  /* Ajouter un focus effet pour les input */
+  input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.8);
+  }
+  

@@ -3,31 +3,37 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "DefiClinique": {
+    "deficlinic": {
       "projectType": "application",
       "schematics": {},
-      "root": "",
-      "sourceRoot": "src",
+      "root": "projects/deficlinic",
+      "sourceRoot": "projects/deficlinic/src",
       "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/defi-clinique",
-            "index": "src/index.html",
-            "browser": "src/main.ts",
+            "outputPath": "dist/deficlinic",
+            "index": "projects/deficlinic/src/index.html",
+            "browser": "projects/deficlinic/src/main.ts",
             "polyfills": [
               "zone.js"
             ],
-            "tsConfig": "tsconfig.app.json",
+            "tsConfig": "projects/deficlinic/tsconfig.app.json",
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              "projects/deficlinic/src/favicon.ico",
+              "projects/deficlinic/src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "@angular/material/prebuilt-themes/indigo-pink.css",
+              "projects/deficlinic/src/styles.css"
             ],
-            "scripts": []
+            "scripts": [],
+            "server": "projects/deficlinic/src/main.server.ts",
+            "prerender": true,
+            "ssr": {
+              "entry": "projects/deficlinic/server.ts"
+            }
           },
           "configurations": {
             "production": {
@@ -57,10 +63,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "DefiClinique:build:production"
+              "buildTarget": "deficlinic:build:production"
             },
             "development": {
-              "buildTarget": "DefiClinique:build:development"
+              "buildTarget": "deficlinic:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -68,7 +74,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "DefiClinique:build"
+            "buildTarget": "deficlinic:build"
           }
         },
         "test": {
@@ -78,18 +84,22 @@
               "zone.js",
               "zone.js/testing"
             ],
-            "tsConfig": "tsconfig.spec.json",
+            "tsConfig": "projects/deficlinic/tsconfig.spec.json",
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              "projects/deficlinic/src/favicon.ico",
+              "projects/deficlinic/src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "@angular/material/prebuilt-themes/indigo-pink.css",
+              "projects/deficlinic/src/styles.css"
             ],
             "scripts": []
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
