@@ -1,0 +1,33 @@
+
+.dep-content p{
+    margin: 50px 0 0 40px;
+    font-size: 31px;
+    color: rgba(0, 16, 57, 1);
+}
+
+.menup{
+    display: flex;
+    padding: 20px;
+}
+
+.box{
+    align-items: center;
+    padding: 10px;
+}
+
+.box .text{
+    cursor: pointer;
+    width: 230px;
+    align-items: center;
+    display: flex;
+    font-size: 25px;
+    padding: 30px;
+    background: rgba(239, 239, 239, 1);
+}
+
+
+img {
+    height: 70px;
+    width: 70px;
+    padding-right: 15px;
+}

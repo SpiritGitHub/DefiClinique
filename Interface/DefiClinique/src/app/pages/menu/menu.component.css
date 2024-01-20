@@ -1,0 +1,27 @@
+.menup{
+    display: flex;
+    padding: 20px;
+}
+
+.box{
+    align-items: center;
+    padding: 10px;
+    padding-top: 30px;
+}
+
+.box .text{
+    cursor: pointer;
+    align-items: center;
+    display: flex;
+    font-size: 25px;
+    padding: 30px;
+    background: rgba(239, 239, 239, 1);
+    border-radius: 25px;
+}
+
+
+img {
+    height: 70px;
+    width: 70px;
+    padding-right: 15px;
+}

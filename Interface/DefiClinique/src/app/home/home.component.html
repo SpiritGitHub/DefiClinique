@@ -1,0 +1,47 @@
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+<mat-toolbar>
+    <button mat-icon-button>
+        <div class="icon">
+            <div class="menu">
+                <i class="ri-menu-4-line"></i>
+            </div>
+        </div>
+    </button>
+    <button mat-icon-button class="loupe-button">
+        <div class="icon">
+            <div class="loupe">
+                <i class="ri-search-line"></i>
+            </div>
+        </div>
+    </button>
+    <form action="#">
+        <div class="fields">
+            <div class="field search">
+                <input type="text" placeholder="search medical records..." required>
+            </div>
+        </div>
+    </form>
+    <button mat-icon-button class="message-button">
+        <div class="icon">
+            <div class="message">
+                <i class="ri-message-2-line"></i>
+            </div>
+        </div>
+    </button>
+    <div class="vertical-line"></div>
+    <div class="img">
+        <img src="../../assets/images/admin_pic.jpg">
+    </div>
+</mat-toolbar>
+
+<mat-sidenav-container>
+    <mat-sidenav opened mode="side" [style.width]="'80px'">
+        <app-custom-sidenav></app-custom-sidenav>
+    </mat-sidenav>
+    <mat-sidenav-content class="content">
+        <!--<app-menu></app-menu>-->
+        <!-- Utilisation de router-outlet pour afficher le contenu dynamique -->
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>

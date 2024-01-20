@@ -1,0 +1,17 @@
+mat-icon {
+    font-size: 25px;
+    text-align: center;
+    color: rgba(20, 0, 100, 1);
+    outline: none;
+    padding:12px;
+}
+
+/* custom-sidenav.component.css
+.mat-nav-list a mat-icon .icon i.ri-home-4-line {
+
+}
+  
+.mat-nav-list a mat-icon .icon i.ri-settings-3-line {
+  
+}*/
+  
