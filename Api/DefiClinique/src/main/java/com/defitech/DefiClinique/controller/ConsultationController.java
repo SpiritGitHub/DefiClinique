@@ -4,10 +4,7 @@ import com.defitech.DefiClinique.Model.Consultation;
 import com.defitech.DefiClinique.service.ConsultationServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("declinique")
@@ -26,4 +23,28 @@ public class ConsultationController {
                 .map(ResponseEntity::ok)
                 .orElseGet(() -> ResponseEntity.notFound().build());
     }
+
+    @PostMapping("/consultation")
+    public ResponseEntity<Consultation> addConsultation(@RequestBody Consultation consultation) {
+        Consultation newConsultation = consultationServices.addConsultation(consultation);
+        return ResponseEntity.ok(newConsultation);
+    }
+
+    @PutMapping("/consultation/{id}")
+    public ResponseEntity<Consultation> updateConsultation(@PathVariable Long id, @RequestBody Consultation consultationDetails) {
+        return consultationServices.updateConsultation(id, consultationDetails)
+                .map(ResponseEntity::ok)
+                .orElseGet(() -> ResponseEntity.notFound().build());
+    }
+
+    @DeleteMapping("/consultation/{id}")
+    public ResponseEntity<?> deleteConsultation(@PathVariable Long id) {
+        if (consultationServices.deleteConsultation(id)) {
+            return ResponseEntity.ok().build();
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    }
+
+
 }
