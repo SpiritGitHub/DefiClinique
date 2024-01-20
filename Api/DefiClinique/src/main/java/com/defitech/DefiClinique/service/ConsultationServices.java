@@ -30,8 +30,10 @@ public class ConsultationServices {
 
     public Optional<Consultation> updateConsultation(Long id, Consultation consultationDetails) {
         return consultationRepository.findById(id)
-                .map(existingConsultation -> {
-                    return consultationRepository.save(existingConsultation);
+                .map(consultation -> {
+                    consultation.setStatusConsul(consultationDetails.getStatusConsul());
+                    consultation.setNotes(consultationDetails.getNotes());
+                    return consultationRepository.save(consultation);
                 });
     }
 

@@ -33,4 +33,6 @@ public class Consultation {
     @Column(name = "recommandation")
     private String recommandations;
 
+    @Column(name = "status_consul")
+    private String statusConsul;
 }
