@@ -21,7 +21,7 @@ public class DossiersMedicaux {
     private Long id;
 
     @Column(name = "id_patient")
-    private Long idPatient;
+    private Long patientId;
 
     @Temporal(TemporalType.DATE)
     @Column(name = "date_creation")
@@ -46,8 +46,8 @@ public class DossiersMedicaux {
     @Column(name = "date_mise_a_jour")
     private Date dateMiseAJour;
 
-    @OneToMany(mappedBy = "dossierMedical")
-    private List<Consultation> consultations;
+    //@OneToMany(mappedBy = "dossierMedical")
+   // private List<Consultation> consultations;
 
 }
 

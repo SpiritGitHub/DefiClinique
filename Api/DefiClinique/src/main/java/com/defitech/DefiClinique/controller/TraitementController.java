@@ -27,7 +27,7 @@ public class TraitementController {
                 .orElseGet(() -> ResponseEntity.notFound().build());
     }
 
-    @PostMapping("/traitement")
+    @PostMapping("/atraitement")
     public ResponseEntity<Traitement> addTraitement(@RequestBody Traitement traitement) {
         Traitement newTraitement = traitementServices.addTraitement(traitement);
         return ResponseEntity.ok(newTraitement);

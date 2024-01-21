@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "consultation")
@@ -35,4 +36,12 @@ public class Consultation {
 
     @Column(name = "status_consul")
     private String statusConsul;
+
+    @Column(name = "medecin_id")
+    private Long medecinId;
+
+    private Long patientId;
+
+    @OneToMany(mappedBy = "consultation")
+    private List<Traitement> traitements;
 }

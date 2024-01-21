@@ -2,11 +2,12 @@ package com.defitech.DefiClinique.service;
 
 import com.defitech.DefiClinique.Model.Consultation;
 import com.defitech.DefiClinique.Repository.ConsultationRepository;
-import io.micrometer.observation.ObservationFilter;
 import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
+import java.util.List;
 import java.util.Optional;
 
 @Data
@@ -15,12 +16,15 @@ public class ConsultationServices {
     @Autowired
     private ConsultationRepository consultationRepository;
 
-    public Optional<Consultation> getConsultation(final Long id){
-        return consultationRepository.findById(id);
+    public List<Consultation> findAllConsultationsByPatient(Long patientId) {
+        return consultationRepository.findByDossierMedicalPatientId(patientId);
     }
 
-    public Iterable<Consultation> getConsultations(){
-        return consultationRepository.findAll();
+    public List<Consultation> findConsultationsByPatientAndPeriod(Long patientId, Date start, Date end) {
+        return consultationRepository.findByDossierMedicalPatientIdAndDateHeureBetween(patientId, start, end);
+    }
+    public List<Consultation> findConsultationsByMedecin(Long medecinId) {
+        return consultationRepository.findByMedecinId(medecinId);
     }
 
     public Consultation addConsultation(Consultation consultation) {

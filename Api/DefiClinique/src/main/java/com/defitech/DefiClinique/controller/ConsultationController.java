@@ -6,45 +6,47 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Date;
+import java.util.List;
+
 @RestController
 @RequestMapping("declinique")
 public class ConsultationController {
     @Autowired
     private ConsultationServices consultationServices;
 
-    @GetMapping("/consultation")
-    public Iterable<Consultation> getConsultations(){
-        return consultationServices.getConsultations();
+    @GetMapping("/patient/{patientId}")
+    public List<Consultation> getAllConsultationsByPatient(@PathVariable Long patientId) {
+        return consultationServices.findAllConsultationsByPatient(patientId);
     }
 
-    @GetMapping("/consultation/{id}")
-    public ResponseEntity<Consultation> getConsultationById(@PathVariable Long id){
-        return consultationServices.getConsultation(id)
-                .map(ResponseEntity::ok)
-                .orElseGet(() -> ResponseEntity.notFound().build());
+    // Récupérer les consultations dans une période donnée
+    @GetMapping("/patient/{patientId}/period")
+    public List<Consultation> getConsultationsByPatientAndPeriod(
+            @PathVariable Long patientId,
+            @RequestParam("start") Date start,
+            @RequestParam("end") Date end) {
+        return consultationServices.findConsultationsByPatientAndPeriod(patientId, start, end);
     }
 
-    @PostMapping("/consultation")
-    public ResponseEntity<Consultation> addConsultation(@RequestBody Consultation consultation) {
-        Consultation newConsultation = consultationServices.addConsultation(consultation);
-        return ResponseEntity.ok(newConsultation);
+    // Récupérer les consultations par médecin
+    @GetMapping("/medecin/{medecinId}")
+    public List<Consultation> getConsultationsByMedecin(@PathVariable Long medecinId) {
+        return consultationServices.findConsultationsByMedecin(medecinId);
     }
 
+    // Ajouter une nouvelle consultation
+    @PostMapping("/addconsultation")
+    public Consultation addConsultation(@RequestBody Consultation consultation) {
+        return consultationServices.addConsultation(consultation);
+    }
+
+    // Mettre a jour une consultation
     @PutMapping("/consultation/{id}")
     public ResponseEntity<Consultation> updateConsultation(@PathVariable Long id, @RequestBody Consultation consultationDetails) {
         return consultationServices.updateConsultation(id, consultationDetails)
                 .map(ResponseEntity::ok)
                 .orElseGet(() -> ResponseEntity.notFound().build());
     }
-
-    @DeleteMapping("/consultation/{id}")
-    public ResponseEntity<?> deleteConsultation(@PathVariable Long id) {
-        if (consultationServices.deleteConsultation(id)) {
-            return ResponseEntity.ok().build();
-        } else {
-            return ResponseEntity.notFound().build();
-        }
-    }
-
 
 }
