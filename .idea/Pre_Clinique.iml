@@ -5,5 +5,7 @@
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="javax.persistence-3.0-prelude-embedded-m2-sources" level="project" />
+    <orderEntry type="library" name="javax.persistence" level="project" />
   </component>
 </module>
