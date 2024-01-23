@@ -1,0 +1,171 @@
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+<section class="dash">
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <a href="#" class="sidebar-back">
+                <i class="ri-arrow-left-line"></i> home
+            </a>
+        </div>
+
+        <h3>Menu</h3>
+        <nav class="nav-menu">
+            <ul>
+                <li class="nav-item">
+                    <a href="home">
+                        <i class="ri-dashboard-line"></i> Dashboard
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="patientDashboard">
+                        <i class="ri-stethoscope-line"></i> Patients Ma...
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a href="prescriptions">
+                        <i class="ri-medicine-bottle-line"></i> Prescription
+                    </a>
+                </li>
+                <li class="nav-item active">
+                    <a href="laboratoire">
+                        <i class="ri-microscope-line"></i> Laboratoire
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="appointment">
+                        <i class="ri-contacts-book-line"></i> Rendez-vous
+                    </a>
+                </li>
+            </ul>
+            <div class="setting">
+                <hr class="h">
+                <li class="nav-item">
+                    <a href="#">
+                        <i class="ri-settings-3-line"></i> Paramètres
+                    </a>
+                </li>
+            </div>
+        </nav>
+        <div class="sidebar-footer">
+            <a href="#" class="sidebar-logo">
+                <img src="../../assets/img/+LO GO.png" alt="Logo"><span>App Name</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="dashboard">
+            <span>Dashboard</span>
+            <div class="search-bar">
+            <input type="search" placeholder="search medical records...">
+            <i (click)="search()" class="ri-search-2-line"></i>
+            </div>
+            <div class="message">
+            <i class="ri-message-2-line"></i>
+            </div>
+            <div class="vertical-line">
+            </div>
+            <div class="profile">
+            <img src="../../assets/img/Downloader.la-61952a60a8464-770x535.jpg">
+            </div>
+    </div>
+
+    <!-- sample-test.component.html -->
+    <div class="tests-wrapper">
+        <div class="test-container">
+        <div class="icon-wrapper">
+            <img src="../../assets/img/Group.png" />
+        </div>
+        <div class="text-wrapper">
+            <p>Prélèvement sanguine</p>
+        </div>
+        <div class="number-wrapper">
+            <span>1</span>
+        </div>
+        </div>
+    
+        <div class="test-container2">
+        <div class="icon-wrapper2">
+            <img src="../../assets/img/saliva.png" />
+        </div>
+        <div class="text-wrapper2">
+            <p>Prélèvement de salive</p>
+        </div>
+        <div class="number-wrapper2">
+            <span>2</span>
+        </div>
+        </div>
+
+        <div class="test-container3">
+            <div class="icon-wrapper3">
+                <img src="../../assets/img/Urine.png" />
+            </div>
+            <div class="text-wrapper3">
+                <p>Prélèvement d'urine</p>
+            </div>
+            <div class="number-wrapper3">
+                <span>3</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- exam-record.component.html -->
+  <div class="exam-record-container">
+        <div class="exam-header">
+            <div class="num">Num prélèvement</div>
+            <div class="observations">Observations</div>
+            <div class="prescriptions">Prescriptions</div>
+        </div>
+        
+        <div class="prescriptions-container">
+            <div class="prescription-item">
+                <div class="item-number">
+                    <span class="number-circle">1</span>
+                </div>
+                <div class="item-details">
+                    <p class="item-text">Lorem ipsum dolor sit amet consectetur. 
+                        <br/>Eget eu metus lorem elementum.</p>
+                </div>
+                <div class="item-prescription">
+                    <p class="prescription-text">Medicament<br><h5>Dose par jour</h5></p>
+                </div>
+            </div>
+        
+            <div class="prescription-item2">
+                <div class="item-number">
+                    <span class="number-circle">2</span>
+                </div>
+                <div class="item-details">
+                    <p class="item-text">Lorem ipsum dolor sit amet consectetur. 
+                        <br/>Eget eu metus lorem elementum.</p>
+                </div>
+                <div class="item-prescription">
+                    <p class="prescription-text">Medicament<br><h5>Dose par jour</h5></p>
+                </div>
+            </div>
+
+            <div class="prescription-item2">
+                <div class="item-number">
+                    <span class="number-circle">3</span>
+                </div>
+                <div class="item-details">
+                    <p class="item-text">Lorem ipsum dolor sit amet consectetur. 
+                        <br/>Eget eu metus lorem elementum.</p>
+                </div>
+                <div class="item-prescription">
+                    <p class="prescription-text">Medicament<br><h5>Dose par jour</h5></p>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+
+    <!-- add-test.component.html -->
+    <button class="add-test-button">
+        <span class="add-icon">+</span>
+        <span class="button-text">Nouveau prélèvement</span>
+    </button>
+    
+  
+  
+  
+</section>

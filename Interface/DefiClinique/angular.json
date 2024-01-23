@@ -3,31 +3,36 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "DefiClinique": {
+    "projet": {
       "projectType": "application",
       "schematics": {},
-      "root": "",
-      "sourceRoot": "src",
+      "root": "projects/projet",
+      "sourceRoot": "projects/projet/src",
       "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/defi-clinique",
-            "index": "src/index.html",
-            "browser": "src/main.ts",
+            "outputPath": "dist/projet",
+            "index": "projects/projet/src/index.html",
+            "browser": "projects/projet/src/main.ts",
             "polyfills": [
               "zone.js"
             ],
-            "tsConfig": "tsconfig.app.json",
+            "tsConfig": "projects/projet/tsconfig.app.json",
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              "projects/projet/src/favicon.ico",
+              "projects/projet/src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "projects/projet/src/styles.css"
             ],
-            "scripts": []
+            "scripts": [],
+            "server": "projects/projet/src/main.server.ts",
+            "prerender": true,
+            "ssr": {
+              "entry": "projects/projet/server.ts"
+            }
           },
           "configurations": {
             "production": {
@@ -57,10 +62,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "DefiClinique:build:production"
+              "buildTarget": "projet:build:production"
             },
             "development": {
-              "buildTarget": "DefiClinique:build:development"
+              "buildTarget": "projet:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -68,7 +73,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "DefiClinique:build"
+            "buildTarget": "projet:build"
           }
         },
         "test": {
@@ -78,18 +83,21 @@
               "zone.js",
               "zone.js/testing"
             ],
-            "tsConfig": "tsconfig.spec.json",
+            "tsConfig": "projects/projet/tsconfig.spec.json",
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              "projects/projet/src/favicon.ico",
+              "projects/projet/src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "projects/projet/src/styles.css"
             ],
             "scripts": []
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "371c2c6d-444e-4eae-aebe-7a4ef962f2a1"
   }
 }

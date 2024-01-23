@@ -1,0 +1,401 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz@0,8..144;1,8..144&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
+.dash {
+    display: flex;
+    position: fixed;
+  }
+ /*-----------------------------------Menu----------------------------------*/ 
+  .sidebar {
+    width: 250px;
+    padding-top: 30px;
+    margin-left: 8px;
+    padding-bottom: 20px;
+    background-color: #EFEFEF;
+    border-right: 1px solid #EFEFEF;
+    height: 95vh;
+    display: block;
+    flex-direction: column;
+    justify-content: right;
+    transition: 25s;
+    padding: 7px 0px;
+    border-radius: 20px 0px 0px 20px;
+  }
+  
+  .sidebar-header {
+    padding: 1rem;
+    background-color: #EFEFEF;
+    border-radius: 20px 0 0 20px;
+  }
+  
+  .sidebar-back {
+    text-decoration: none;
+    color: #140064;
+    display: flex;
+    font-size: 25px;
+    font-weight: bolder;
+    align-items: center;
+  }
+  
+  h3 {
+    padding-left: 20px;
+    font-size: 25px;
+    font-family: 'Roboto Serif', serif;
+    color: #140064;
+  }
+  
+  .nav-menu ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .nav-item {
+    padding: 2px 0 5px 0;
+    justify-content: space-around;
+  }
+  
+  .nav-item a {
+    text-decoration: none;
+    color: #140064;
+    display: flex;
+    font-size: 20px;
+    align-items: center;
+    padding: 0.5rem;
+    padding-left: 10px;
+  }
+  
+  .nav-item a:hover,
+  .nav-item.active a {
+    background-color: #B10000;
+    border-left: 4px solid #140064;
+    width: 91.5%;
+    color: #fff;
+  }
+  
+  .nav-item a i {
+    font-size: 30px;
+    padding-right: 50px;
+  }
+  
+  .setting {
+    padding-top: 110px;
+  }
+  
+  .h {
+    width: 200px;
+    height: 0.2px;
+    color: rgba(0, 0, 0, 0.47);
+    margin-right: auto;
+    background-color: rgba(0, 0, 0, 0.47);
+  }
+  
+  .sidebar-footer {
+    padding: 1rem;
+    background-color: #EFEFEF;
+    text-align: center;
+    border-radius: 0 20px;
+  }
+  
+  .sidebar-logo {
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    align-items: top;
+    padding-top: 50px;
+    padding-left: 10px;
+  }
+  
+  .sidebar-logo span {
+    font-size: 20px;
+    color: #001039;
+    padding-left: 10px;
+  }
+  
+  .logo-image {
+    height: 100px;
+    width: 100px;
+    padding-left: 0px;
+  }
+
+  /*-----------------Docteur name-----------------*/
+.doctor-card {
+  background-color: none;
+  width: 280px;
+  height: 100px;
+  font-family: 'Arial', sans-serif;
+  color: #ffffff; 
+  position: relative; 
+  margin-left: 850px;
+}
+
+.doctor-card h2 {
+  color: #000; 
+  font-size: 30px;
+  margin-top: 10px;
+  font-family: 'Arvo', serif;  
+}
+
+.speciality-line {
+  position: absolute; 
+  text-align: center; 
+  margin-top: -23px;
+}
+
+.speciality-line .speciality { 
+  color: #00BD13; 
+  font-size: 18px;
+  font-family: 'Arvo', serif;
+  background:none; 
+  margin-left: 90px;
+}
+
+.doctor-card .id {
+  position: absolute;
+  bottom: -15px;
+  left: 90px; 
+  color: #A9A8A8;
+}
+
+.logo-container {
+  position: absolute;
+  margin-left: 290px; 
+  top: 5px; 
+  display: flex;
+  align-items: center;
+}
+
+.logo-container img {
+  height: 30px;
+  width: 30px;
+  object-fit: contain;
+  margin-top: -10px;
+}
+
+/* patient-form.component.css */
+.patient-form {
+  border: none;
+  border-radius: 5px;
+  width: 1160px;
+  height: 200px;
+  margin-left: -1105px;
+  max-width: 1160px; 
+  margin-top: 140px;
+  background-color: none;
+}
+
+.form-group1 label {
+  margin-left: 10px; 
+  display: flex;
+  margin-top: 5px;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  font-family: 'Arvo', serif;
+  font-size: 18px;
+  color: #000;
+}
+
+.form-group1 input{ 
+  margin-left: 10px;
+  position: relative;
+  width: 400px;
+  bottom: 20px;
+  margin-top: 30px;
+  background-color: #EAEAEA;
+}
+.form-group1 input[type="text"] {
+  flex-grow: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+}
+
+.form-group2 label {
+  margin-left: 550px; 
+  display: flex;
+  margin-top: -90px;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  font-family: 'Arvo', serif;
+  font-size: 18px;
+  color: #000;
+}
+
+.form-group2 input{ 
+  margin-left: 550px;
+  position: relative;
+  width: 230px;
+  height: 38px;
+  border-radius: 10px;
+  background-color: #EAEAEA;
+  bottom: 20px;
+  border: none;
+  margin-top: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.form-group2 input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(10%); 
+}
+
+.form-group3 label {
+  margin-left: 933px; 
+  display: flex;
+  margin-top: -91px;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  font-family: 'Arvo', serif;
+  font-size: 18px;
+  color: #000;
+}
+
+.form-group3 input{ 
+  margin-left: 931px;
+  position: relative;
+  width: 200px;
+  height: 38px;
+  bottom: 20px;
+  margin-top: 28px;
+  border: none;
+  border-radius: 10px;
+  background-color: #EAEAEA;
+}
+
+.form-group4 label {
+  margin-left: 10px; 
+  display: flex;
+  margin-top: -5px;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  font-family: 'Arvo', serif;
+  font-size: 18px;
+  color: #000;
+}
+
+.form-group4 input{ 
+  margin-left: 10px;
+  position: relative;
+  width: 785px;
+  height: 38px;
+  bottom: 10px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: #EAEAEA;
+}
+
+.form-group5 label {
+  margin-left: 860px; 
+  display: flex;
+  margin-top: -84px;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  font-family: 'Arvo', serif;
+  font-size: 18px;
+  color: #000;
+}
+
+.form-group5 select {
+  margin-left: 860px;
+  position: relative;
+  width: 275px;
+  height: 40px;
+  bottom: 10px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: #EAEAEA;
+}
+
+/* Adjust the style for select element in Firefox */
+@-moz-document url-prefix() {
+  .form-group5 select {
+    text-indent: 0.01px; /* For Firefox */
+    text-overflow: ""; /* For Firefox */
+  }
+}
+
+/*----------------------------Prescriptions Message----------------*/
+.prescription-container {
+  border: none;
+  border-radius: 10px;
+  padding: 5px;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1120px;
+  width: 1115px;
+  height: 350px;
+  margin-top: 363px; 
+  margin-left: -1150px;
+}
+
+.prescription-container h2 {
+  color: #000;
+  margin-top: -400px;
+  margin-left: -5px;
+  font-family: 'Arvo', serif;
+  font-size: 20px;
+  font-weight: normal;
+}
+
+.line {
+  border: 1px dashed #000;
+  width: 1120px; 
+  height: 0;
+  margin-top: -265px;
+  margin-left: -130px;
+}
+ .prescription-fields .name {
+  position: fixed;
+  margin-top: -170px;
+  margin-left: -1000px;
+  font-size: 20px;
+  font-family: 'Arvo', serif;
+  color: #000;
+}
+
+.prescription-fields .dosage {
+  position: fixed;
+  margin-top: -170px;
+  margin-left: -230px;
+  width: 200px;
+  font-size: 20px;
+  font-family: 'Arvo', serif;
+  color: #000;
+}
+
+
+.prescription-fields input[type="text"] {
+  width: 1080px;
+  height: 285px;
+  padding: 5px; 
+  background-image: url(../../assets/img/R-removebg-preview.png);
+  margin-left: -1100px;
+  background-repeat: no-repeat; 
+  background-position: center center;
+  background-color: #f0f0f0;
+  background-size: 35% 80%;
+  background-position-y: 30px;
+  opacity: 0.5;
+  position: fixed;
+  margin-top: -130px;
+  border: none;
+  border-radius: 4px;
+}
+
+/*.medical-symbol img {
+  height: 150px; 
+  width: 200px;
+  position: fixed;
+  margin-top: 200px;
+  margin-left: -500px;
+}*/
+
+
+ 

@@ -1,0 +1,397 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz@0,8..144;1,8..144&display=swap');
+.dash {
+    display: flex;
+    position: fixed;
+  }
+ /*-----------------------------------Menu----------------------------------*/ 
+  .sidebar {
+    width: 250px;
+    padding-top: 30px;
+    margin-left: 8px;
+    padding-bottom: 20px;
+    background-color: #EFEFEF;
+    border-right: 1px solid #EFEFEF;
+    height: 95vh;
+    display: block;
+    flex-direction: column;
+    justify-content: right;
+    transition: 25s;
+    padding: 7px 0px;
+    border-radius: 20px 0px 0px 20px;
+  }
+  
+  .sidebar-header {
+    padding: 1rem;
+    background-color: #EFEFEF;
+    border-radius: 20px 0 0 20px;
+  }
+  
+  .sidebar-back {
+    text-decoration: none;
+    color: #140064;
+    display: flex;
+    font-size: 25px;
+    font-weight: bolder;
+    align-items: center;
+  }
+  
+  h3 {
+    padding-left: 20px;
+    font-size: 25px;
+    font-family: 'Roboto Serif', serif;
+    color: #140064;
+  }
+  
+  .nav-menu ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .nav-item {
+    padding: 2px 0 5px 0;
+    justify-content: space-around;
+  }
+  
+  .nav-item a {
+    text-decoration: none;
+    color: #140064;
+    display: flex;
+    font-size: 20px;
+    align-items: center;
+    padding: 0.5rem;
+    padding-left: 10px;
+  }
+  
+  .nav-item a:hover,
+  .nav-item.active a {
+    background-color: #B10000;
+    border-left: 4px solid #140064;
+    width: 91.5%;
+    color: #fff;
+  }
+  
+  .nav-item a i {
+    font-size: 30px;
+    padding-right: 50px;
+  }
+  
+  .setting {
+    padding-top: 110px;
+  }
+  
+  .h {
+    width: 200px;
+    height: 0.2px;
+    color: rgba(0, 0, 0, 0.47);
+    margin-right: auto;
+    background-color: rgba(0, 0, 0, 0.47);
+  }
+  
+  .sidebar-footer {
+    padding: 1rem;
+    background-color: #EFEFEF;
+    text-align: center;
+    border-radius: 0 20px;
+  }
+  
+  .sidebar-logo {
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    align-items: top;
+    padding-top: 50px;
+    padding-left: 10px;
+  }
+  
+  .sidebar-logo span {
+    font-size: 20px;
+    color: #001039;
+    padding-left: 10px;
+  }
+  
+  .logo-image {
+    height: 100px;
+    width: 100px;
+    padding-left: 0px;
+  }
+/*-------------------------- photo rectangle------------------*/
+  .rectangle-image {
+    width: 196px; 
+    height: 169px; 
+    margin-top: -660px;
+    background-size: cover;
+    position: relative;
+    background: url(../../assets/img/Downloader.la-61952a60a8464-770x535.jpg);  
+    margin-left: 300px;
+    background-position: center;
+}
+
+.rectangle-image h1{
+    font-size: 20px;
+    font-family: 'Roboto Serif', serif;
+    color: #000;
+    text-align: center;
+    margin-top: 175px;
+    margin-left: 40px;
+    position: absolute;
+}
+
+.rectangle-image h2{
+    font-size: 15px;
+    font-family: 'Roboto Serif', serif;
+    color: #000;
+    text-align: center;
+    margin-top: 200px;
+    margin-left: 70px;
+    position: absolute;
+}
+
+.rectangle-image h2 span{
+    color: #A9A8A8;
+}
+
+/*------------------------- Dashbord --------------------*/
+  .dashboard {
+    display: flex;
+    margin-left: 1rem;
+    background-color: #EAEAEA;
+    width: 1180px;
+    justify-content: center;
+    padding-left: 16px;
+    height: 50px;
+    border-radius: 0 20px 0 0;
+  }
+  
+  .dashboard span {
+    margin-top: 15px;
+    font-size: 20px;
+    color: #001039;
+  }
+  
+  .search-bar {
+    flex-grow: 1;
+    margin-left: 42rem;
+    display: flex;
+    color: #000;
+    border: none;
+    cursor: pointer;
+    padding-top: 15px;
+  }
+  
+  input[type="search"] {
+    width: 250px;
+    height: 20px;
+    border: none;
+    margin-right: 2px;
+    background: none;
+    font-size: 20px;
+    opacity: 26%;
+  }
+  
+  .search-bar i {
+    font-size: 25px;
+  }
+  
+  .message {
+    margin-right: 25px;
+    margin-top: 15px;
+    margin-left: 20px;
+    font-size: 25px;
+  }
+  
+  .vertical-line {
+    border-left: 1px solid #000;
+    opacity: 47%;
+    margin-top: 5px;
+    padding-top: 30px;
+    padding-left: 15px;
+    margin-right: 5px;
+    width: 1px;
+    height: 10px;
+  }
+  
+  .profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: all 0.3s ease;
+    margin-right: 16px;
+    margin-top: 5px;
+  }
+
+  /*--------------------heart-rate.component.css ----------------------------------*/
+.heart-rate-card {
+    width: 240px; 
+    height: 180px; 
+    border-radius: 25px;
+    margin-left: -900px;
+    margin-top: 72px;
+    position: relative;
+    background-color: #EFEFEF;
+}
+  
+  .icon-container img {
+    width: 95px;
+    height: 85px;
+    margin-left: 75px;
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  
+  .text-container h2 {
+    margin: 2px;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px; 
+  }
+  
+  .text-container .bpm {
+    margin: 20px;
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Roboto Serif', serif; 
+    font-weight: bold;
+  }
+
+  .temperature {
+    width: 240px; 
+    height: 180px; 
+    border-radius: 25px;
+    margin-left: 330px;
+    margin-top: -190px;
+    position: relative;
+    background-color: #EFEFEF;
+}
+
+.icon-container2 img {
+  width: 90px;
+  height: 82px;
+  margin-left: 80px;
+  margin-top: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-container2 h2 {
+  margin: 10px;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px; 
+}
+
+.text-container2 .°C {
+  margin: 20px;
+  text-align: center;
+  font-size: 25px;
+  font-family: 'Roboto Serif', serif; 
+  font-weight: bold;
+}
+  
+.glucose {
+  width: 240px; 
+  height: 180px; 
+  border-radius: 25px;
+  margin-left: 658px;
+  margin-top: -180px;
+  position: relative;
+  background-color: #EFEFEF;
+}
+
+.icon-container3 img {
+  width: 90px;
+  height: 82px;
+  margin-left: 80px;
+  margin-top: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-container3 h2 {
+  margin: 10px;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px; 
+}
+
+.text-container3 .litre {
+  margin: 20px;
+  text-align: center;
+  font-size: 25px;
+  font-family: 'Roboto Serif', serif; 
+  font-weight: bold;
+}
+
+/*------------------Information personnel--------------------------*/
+.patient-info-card {
+  background-color: #f0f0f0; 
+  border: 1px solid #EFEFEF;  
+  border-radius: 10px;
+  padding: 30px; 
+  width: 200px;
+  height: 341px; 
+  margin-top: 330px; 
+  margin-left: -535px;
+  font-family: 'Roboto Serif', serif; 
+  font-size: 14px; 
+}
+
+.patient-info-card h3 {
+  margin-top: -20px; 
+  margin-left: -40px;
+  color: #000; 
+  font-weight: normal;
+  font-size: 25px;
+  font-family: 'Roboto Serif', serif;
+}
+
+.patient-info-card ul {
+  list-style: none; 
+  margin-top: 90px;  
+  margin-left: -60px;
+  
+}
+
+.patient-info-card li {
+  margin-bottom: 15px; 
+  font-size: 15px;
+}
+
+
+/*--------------------------------Traitement---------------------------*/
+.health-summary {
+  border: 25px 0 0 25px; 
+  border-radius: 10px; 
+  padding: 20px;
+  background-color: #EFEFEF;  
+  font-family: 'Arial', sans-serif;
+  max-width: 856px; 
+  margin-top: 280px; 
+  margin-left: 35px;
+  height: 412px;
+}
+
+.health-summary .section { 
+  margin-bottom: 40px; 
+  margin-top: 10px;
+}
+
+.health-summary h3 {
+  color: #000; 
+  margin: 0 0 40px -20px; 
+  font-size: 20px;
+  font-family: 'Roboto Serif', serif;
+  font-weight: bold;
+}
+
+.health-summary p {
+  margin: -70px 0 0 450px; 
+  font-size: 15px;
+  font-family: 'Roboto Serif', serif;
+
+}
+
+

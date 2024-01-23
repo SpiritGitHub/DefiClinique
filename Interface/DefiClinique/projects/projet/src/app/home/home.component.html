@@ -1,0 +1,183 @@
+
+
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+<section class="dash">
+  <div class="sidebar">
+    <div class="sidebar-header">
+      <a href="#" class="sidebar-back">
+        <i class="ri-arrow-left-line"></i> home
+      </a>
+    </div>
+
+    <h3>Menu</h3>
+    <nav class="nav-menu">
+      <ul>
+        <li class="nav-item active">
+          <a href="home">
+            <i class="ri-dashboard-line"></i> Dashboard</a>
+        </li>
+        <li class="nav-item ">
+          <a href="patientDashboard">
+            <i class="ri-stethoscope-line"></i> Patients Ma...
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="prescriptions">
+            <i class="ri-medicine-bottle-line"></i> Prescription </a>
+        </li>
+        <li class="nav-item">
+          <a href="laboratoire">
+            <i class="ri-microscope-line"></i> Laboratoire </a>
+        </li>
+        <li class="nav-item">
+          <a href="appointment">
+            <i class="ri-contacts-book-line"></i> Rendez-vous </a>
+        </li>
+        <div class="setting">
+          <hr class="h">
+          <li class="nav-item ">
+            <a href="#">
+              <i class="ri-settings-3-line"></i> Paramètres</a>
+          </li>
+        </div>
+      </ul>
+    </nav>
+    <div class="sidebar-footer">
+      <a href="#" class="sidebar-logo">
+        <img src="../../assets/img/+LO GO.png" alt="Logo"> <span>App Name</span> </a>
+    </div>
+
+    <div class="info">
+      <span>Welcome</span>
+      <h2>Ms John DOE</h2>
+      <hr class="B">
+      <p>Lorem ipsum dolor sit amet consectetur. Risus hendrerit amet elementum proin accumsan. non id enim faucibus vel ac tincidunt.</p>
+    </div>
+
+  
+  </div>
+
+  <div class="dashboard">
+    <span>Dashboard</span>
+    <div class="search-bar">
+      <input type="search" placeholder="search medical records...">
+      <i (click)="search()" class="ri-search-2-line"></i>
+    </div>
+    <div class="message">
+      <i class="ri-message-2-line"></i>
+    </div>
+    <div class="vertical-line">
+    </div>
+    <div class="profile">
+      <img src="../../assets/img/Downloader.la-61952a60a8464-770x535.jpg">
+    </div>
+  </div>
+
+  
+  <div class="table-responsive">
+    <h1>Resultats d'analyse</h1>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Échantillon</th>
+          <th>Date/Heure</th>
+          <th>Interprétation</th>
+          <th>Commentaires</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Sang</td>
+          <td>21/01/2023 <br/>15:05</td>
+          <td>Normal</td>
+          <td>Pas de commentaires <i class="ri-delete-bin-5-line"></i></td>
+        </tr>
+        <tr>
+          <td>Urine</td>
+          <td>30/05/2023 <br/>16:03</td>
+          <td>Anormal</td>
+          <td>Veuillez contacter le docteur<br/> pour un suivi médical <i class="ri-delete-bin-5-line"></i></td>
+        </tr>
+        <tr>
+          <td>Sang</td>
+          <td>21/01/2023 <br/>15:05</td>
+          <td>Normal</td>
+          <td>Pas de commentaires <i class="ri-delete-bin-5-line"></i></td>
+        </tr>
+        <tr>
+          <td>Urine</td>
+          <td>30/05/2023 <br/> 16:03</td>
+          <td>Anormal</td>
+          <td>Veuillez contacter le docteur<br/> pour un suivi médical <i class="ri-delete-bin-5-line"></i></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+  <div class="calendar-container">
+    <header class="calendar-header">
+      <h1>Décembre 2023</h1>
+      <div class="calendar-navigation">
+        <i class="ri-arrow-left-wide-line"></i>
+        <span>L M M J V S D</span>
+        <i class="ri-arrow-right-wide-line"></i>
+      </div>
+    </header>
+    <div class="rectangles">
+      <div class="rectangle">
+        <div class="text">
+          <h1>Jean Doe</h1>
+          <span>Spécialité: _ _  _ _ _ _ _ </span>
+          <h4>7h00<br/>12h00</h4>
+        </div>
+        <div class="vertical-line2">
+        </div>
+        <div class="profile2">
+          <img src="../../assets/img/Downloader.la-61952a60a8464-770x535.jpg">
+        </div>
+      </div>
+
+      <div class="rectangle1">
+        <div class="text">
+          <h1>Jean Doe</h1>
+          <span>Spécialité: _ _  _ _ _ _ _ </span>
+          <h4>7h00<br/>12h00</h4>
+        </div>
+        <div class="vertical-line2">
+        </div>
+        <div class="profile2">
+          <img src="../../assets/img/Downloader.la-61952a60a8464-770x535.jpg">
+        </div>
+      </div>
+
+      <div class="rectangle2">
+        <div class="text">
+          <h1>Jean Doe</h1>
+          <span>Spécialité: _ _  _ _ _ _ _ </span>
+          <h4>7h00<br/>12h00</h4>
+        </div>
+        <div class="vertical-line2">
+        </div>
+        <div class="profile2">
+          <img src="../../assets/img/Downloader.la-61952a60a8464-770x535.jpg">
+        </div>
+      </div>
+
+      <div class="rectangle3">
+        <div class="text">
+          <h1>Jean Doe</h1>
+          <span>Spécialité: _ _  _ _ _ _ _ </span>
+          <h4>7h00<br/>12h00</h4>
+        </div>
+        <div class="vertical-line2">
+        </div>
+        <div class="profile2">
+          <img src="../../assets/img/Downloader.la-61952a60a8464-770x535.jpg">
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</section>

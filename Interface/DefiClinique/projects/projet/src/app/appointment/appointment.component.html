@@ -1,0 +1,132 @@
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+<section class="dash">
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <a href="home" class="sidebar-back">
+                <i class="ri-arrow-left-line"></i> home
+            </a>
+        </div>
+
+        <h3>Menu</h3>
+        <nav class="nav-menu">
+            <ul>
+                <li class="nav-item">
+                    <a href="home">
+                        <i class="ri-dashboard-line"></i> Dashboard
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="patienDashboard">
+                        <i class="ri-stethoscope-line"></i> Patients Ma...
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a href="prescriptions">
+                        <i class="ri-medicine-bottle-line"></i> Prescription
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="laboratoire">
+                        <i class="ri-microscope-line"></i> Laboratoire
+                    </a>
+                </li>
+                <li class="nav-item active">
+                    <a href="appointment">
+                        <i class="ri-contacts-book-line"></i> Rendez-vous
+                    </a>
+                </li>
+            </ul>
+            <div class="setting">
+                <hr class="h">
+                <li class="nav-item">
+                    <a href="#">
+                        <i class="ri-settings-3-line"></i> Paramètres
+                    </a>
+                </li>
+            </div>
+        </nav>
+        <div class="sidebar-footer">
+            <a href="#" class="sidebar-logo">
+                <img src="../../assets/img/+LO GO.png" alt="Logo"><span>App Name</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="dashboard">
+            <span>Dashboard</span>
+            <div class="search-bar">
+            <input type="search" placeholder="search medical records...">
+            <i (click)="search()" class="ri-search-2-line"></i>
+            </div>
+            <div class="message">
+            <i class="ri-message-2-line"></i>
+            </div>
+            <div class="vertical-line">
+            </div>
+            <div class="profile">
+            <img src="../../assets/img/Downloader.la-61952a60a8464-770x535.jpg">
+            </div>
+    </div>
+
+    <!-- schedule.component.html -->
+    <div class="schedule-container">
+        <div class="schedule-section">
+            <div class="section-title">Matin</div>
+            <div class="time-slots">
+                <!-- Générer dynamiquement les créneaux du matin -->
+                <div *ngFor="let time of morningSlots" 
+                    class="time-slot" 
+                    [ngClass]="{'selected': selectedSlot === time}"
+                    (click)="selectSlot(time)">
+                {{ time }}
+                </div>
+            </div>
+        </div>
+    
+        <div class="schedule-section">
+        <div class="section-title">Après-midi / Soir</div>
+        <div class="time-slots">
+            <!-- Générer dynamiquement les créneaux de l'après-midi -->
+            <div *ngFor="let time of afternoonSlots" 
+                class="time-slot" 
+                [ngClass]="{'selected': selectedSlot === time}"
+                (click)="selectSlot(time)">
+            {{ time }}
+            </div>
+        </div>
+        </div>
+    </div>
+
+
+    <!-- buttons.component.html -->
+    <div class="button-group">
+        <button class="btn apply-btn">Appliquer</button>
+        <span class="divider" (click)="onCancel()">ou Annuler</span>
+    </div>
+    
+  
+    
+
+   <!--calendar.component.html--> 
+     
+    <div class="calendar">
+        <mat-calendar></mat-calendar>
+    </div>
+
+    <!-- <mat-card class="calendar-card">
+        <mat-calendar [(selected)]="selected"></mat-calendar>
+        <p>Selected date: {{selected | date}}</p>
+    </mat-card>-->
+      
+  
+
+    <!-- date-time-display.component.html -->
+    <div class="date-time-container">
+        <div class="date">Jeudi 16 janvier 2020</div>
+        <div class="time">11h00</div>
+    </div>
+  
+  
+  
+</section>

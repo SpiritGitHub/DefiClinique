@@ -1,0 +1,148 @@
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+<section class="dash">
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <a href="#" class="sidebar-back">
+                <i class="ri-arrow-left-line"></i> home
+            </a>
+        </div>
+
+        <h3>Menu</h3>
+        <nav class="nav-menu">
+            <ul>
+                <li class="nav-item">
+                    <a href="home">
+                        <i class="ri-dashboard-line"></i> Dashboard
+                    </a>
+                </li>
+                <li class="nav-item active">
+                    <a href="patientDashboard">
+                        <i class="ri-stethoscope-line"></i> Patients Ma...
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="prescriptions">
+                        <i class="ri-medicine-bottle-line"></i> Prescription
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="laboratoire">
+                        <i class="ri-microscope-line"></i> Laboratoire
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="appointment">
+                        <i class="ri-contacts-book-line"></i> Rendez-vous
+                    </a>
+                </li>
+            </ul>
+            <div class="setting">
+                <hr class="h">
+                <li class="nav-item">
+                    <a href="#">
+                        <i class="ri-settings-3-line"></i> Paramètres
+                    </a>
+                </li>
+            </div>
+        </nav>
+        <div class="sidebar-footer">
+            <a href="#" class="sidebar-logo">
+                <img src="../../assets/img/+LO GO.png" alt="Logo"><span>App Name</span>
+            </a>
+        </div>
+
+        <div class="rectangle-image">
+            <h1>Dr Sarah Jean</h1>
+            <h2><span class="age-color">Age:</span> 30 ans</h2>
+        </div>
+    </div>
+
+    
+    <div class="dashboard">
+        <span>Dashboard</span>
+        <div class="search-bar">
+          <input type="search" placeholder="search medical records...">
+          <i (click)="search()" class="ri-search-2-line"></i>
+        </div>
+        <div class="message">
+          <i class="ri-message-2-line"></i>
+        </div>
+        <div class="vertical-line">
+        </div>
+        <div class="profile">
+            <img src="../../assets/img/Downloader.la-61952a60a8464-770x535.jpg">
+        </div>
+    </div>
+
+
+    <div class="heart-rate-card">
+        <div class="icon-container">
+            <img src="../../assets/img/Heart.png"/>
+        </div>
+        <div class="text-container">
+            <h2>Battement de coeur</h2>
+            <p class="bpm">80bpm</p>
+        </div>
+        <div class="temperature">
+            <div class="icon-container2">
+              <img src="../../assets/img/Temperature.png"/>
+            </div>
+            <div class="text-container2">
+              <h2>Température du corps</h2>
+              <p class="°C">36.5°C</p>
+            </div>
+        </div>
+        <div class="glucose">
+            <div class="icon-container3">
+              <img src="../../assets/img/Glucose.png"/>
+            </div>
+            <div class="text-container3">
+              <h2>Glucose</h2>
+              <p class="litre">100mg/l</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- patient-info.component.html -->
+        <div class="patient-info-card">
+            <h3>Information:</h3>
+            <ul>
+            <li>Genre:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Masculin</li>
+            <li>Groupe sanguin:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A+</li>
+            <li>Allergie:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lait, Fromage</li>
+            <li>Maladies récents:&nbsp;&nbsp;&nbsp;Diabètes</li>
+            <li>Poids:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;80Kg</li>
+            <li>Taille:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1m70</li>
+            <li>Id patient:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;00124536</li>
+            <li>Dernière visite:&nbsp;&nbsp;&nbsp;&nbsp;20/01/2023</li>
+            </ul>
+        </div>
+
+
+        <!-- health-summary.component.html -->
+        <div class="health-summary">
+            <div class="section">
+            <h3>Traitement & soins</h3>
+            <p>Lorem ipsum dolor sit amet consectetur. Euismod metus egestas lobortis ut. Sed imperdiet enim cursus amet senectus sed.</p>
+            </div>
+            <div class="section">
+            <h3>Notes cliniques et rapport</h3>
+            <p>Lorem ipsum dolor sit amet consectetur. Id tempor erat duis odio ullamcorper convallis proin. A mauris pretium eget ut sed nunc.</p>
+            </div>
+            <div class="section">
+            <h3>Paramètres vitaux</h3>
+            <p>Lorem ipsum dolor sit amet consectetur. Id tempor erat duis odio ullamcorper convallis proin. A mauris pretium eget ut sed nunc.</p>
+            </div>
+            <div class="section">
+            <h3>Observation & symptômes</h3>
+            <p>Lorem ipsum dolor sit amet consectetur. Id tempor erat duis odio ullamcorper convallis proin. A mauris pretium eget ut sed nunc.</p>
+            </div>
+            <div class="section">
+            <h3>Coordination des soins</h3>
+            <p>Lorem ipsum dolor sit amet consectetur. Id tempor erat duis odio ullamcorper convallis proin. A mauris pretium eget ut sed nunc.</p>
+            </div>
+        </div>
+        
+  
+</section>
