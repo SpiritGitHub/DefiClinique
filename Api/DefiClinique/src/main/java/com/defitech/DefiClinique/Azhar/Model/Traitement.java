@@ -1,4 +1,4 @@
-package com.defitech.DefiClinique.Model;
+package com.defitech.DefiClinique.Azhar.Model;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -16,6 +16,11 @@ public class Traitement {
     private Long id;
 
     @ManyToOne
+    @JoinColumn(name = "historique_medicale_id")
+    private HistoriqueMedicale historiqueMedicale;
+
+    @ManyToOne
+    @JoinColumn(name = "consultation_id")
     private Consultation consultation;
 
     @Column(name = "description")
@@ -29,4 +34,10 @@ public class Traitement {
 
     @Column(name = "instruction")
     private String instructions;
+
+    @Column(name = "id_patient")
+    private Long patientId;
+
+    @Column(name = "medecin_id")
+    private Long medecinId;
 }

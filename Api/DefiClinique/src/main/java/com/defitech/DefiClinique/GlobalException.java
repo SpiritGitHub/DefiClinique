@@ -1,5 +1,6 @@
 package com.defitech.DefiClinique;
 
+import lombok.Data;
 import org.springframework.boot.context.config.ConfigDataResourceNotFoundException;
 import org.springframework.dao.DataAccessException;
 import org.springframework.http.HttpStatus;
@@ -11,8 +12,15 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.context.request.WebRequest;
 
 @ControllerAdvice
+@Data
 public class GlobalException {
 
+    private static class ErrorResponse {
+        private HttpStatus status;
+        private String message;
+        private String errorType;
+        private String path;
+    }
     @ExceptionHandler(ConfigDataResourceNotFoundException.class)
     @ResponseStatus(HttpStatus.NOT_FOUND)
     public ResponseEntity<Object> handleResourceNotFoundException(ConfigDataResourceNotFoundException ex, WebRequest request) {
