@@ -389,13 +389,23 @@
   border-radius: 4px;
 }
 
-/*.medical-symbol img {
-  height: 150px; 
+/*----------------------button---------------------------*/
+.save {
+  margin-top: 50px;
+  margin-left: -1125px;
+  
+}
+.button-save{
   width: 200px;
-  position: fixed;
-  margin-top: 200px;
-  margin-left: -500px;
-}*/
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  background-color: #47B247;
+  font-size: 20px;
+  font-family: 'Arvo', serif;
+  font-weight: normal;
+  cursor: pointer;
+}
 
 
  

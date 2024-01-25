@@ -9,4 +9,8 @@ import { Component } from '@angular/core';
 })
 export class PrescriptionsComponent {
 
+  onButtonClick() {
+    // Utiliser location.reload() pour actualiser la page
+    location.reload();
+  }
 }

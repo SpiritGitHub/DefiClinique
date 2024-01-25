@@ -108,24 +108,33 @@
   
     
 
-   <!--calendar.component.html--> 
+   <!--calendar.component.html-->
      
-    <div class="calendar">
-        <mat-calendar></mat-calendar>
+    <div class="calendar-container">
+        <div class="calendar-header">
+          <button (click)="previousMonth()"><i class="ri-arrow-left-s-line"></i></button>
+          <span>{{ currentMonth | date: 'MMMM' }}</span>
+          <button (click)="nextMonth()"><i class="ri-arrow-right-s-line"></i></button>
+        </div>
+        <div class="calendar-grid">
+          <div class="day-name" *ngFor="let dayName of dayNames">{{ dayName }}</div>
+          <div class="day" *ngFor="let day of calendarDays" [class.is-today]="day.isToday">
+            {{ day.date | date: 'd' }}
+          </div>
+        </div>
     </div>
-
-    <!-- <mat-card class="calendar-card">
-        <mat-calendar [(selected)]="selected"></mat-calendar>
-        <p>Selected date: {{selected | date}}</p>
-    </mat-card>-->
-      
-  
 
     <!-- date-time-display.component.html -->
     <div class="date-time-container">
         <div class="date">Jeudi 16 janvier 2020</div>
         <div class="time">11h00</div>
     </div>
+  
+    <div class="select-datetime">
+        <button class="date-btn" (click)="selectDate()">Sélectionner la date</button>
+        <button class="time-btn" (click)="selectTime()">Sélectionner l'heure</button>
+    </div>
+      
   
   
   

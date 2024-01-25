@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatNativeDateModule } from '@angular/material/core';
 import {MatDatepickerModule} from '@angular/material/datepicker';
@@ -18,7 +18,37 @@ import {provideNativeDateAdapter} from '@angular/material/core';
   styleUrl: './appointment.component.css'
 })
 
-export class AppointmentComponent{
+export class AppointmentComponent implements OnInit{
+  currentMonth: Date = new Date();
+  calendarDays: any[] = [];
+  dayNames = ['Dim', 'Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam'];
+
+  ngOnInit() {
+    this.generateCalendar();
+  }
+
+  generateCalendar(): void {
+    const startDay = new Date(this.currentMonth.getFullYear(), this.currentMonth.getMonth(), 1);
+    const endDay = new Date(this.currentMonth.getFullYear(), this.currentMonth.getMonth() + 1, 0);
+    this.calendarDays = [];
+
+    for (let day = startDay; day <= endDay; day.setDate(day.getDate() + 1)) {
+      this.calendarDays.push({
+        date: new Date(day),
+        isToday: day.toDateString() === new Date().toDateString()
+      });
+    }
+  }
+
+  previousMonth(): void {
+    this.currentMonth.setMonth(this.currentMonth.getMonth() - 1);
+    this.generateCalendar();
+  }
+
+  nextMonth(): void {
+    this.currentMonth.setMonth(this.currentMonth.getMonth() + 1);
+    this.generateCalendar();
+  }
   
   search() {
     // Implement search logic here
@@ -40,5 +70,16 @@ export class AppointmentComponent{
     console.log('Annuler clicked');
   }
   selected: Date | null = null;
+  
+
+  selectDate(): void {
+    // Code pour la sélection de la date
+    console.log('Date selection clicked');
+  }
+
+  selectTime(): void {
+    // Code pour la sélection de l'heure
+    console.log('Time selection clicked');
+  }
 
 }

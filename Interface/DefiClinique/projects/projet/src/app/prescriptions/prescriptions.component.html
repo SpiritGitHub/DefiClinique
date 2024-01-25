@@ -3,7 +3,7 @@
 <section class="dash">
     <div class="sidebar">
         <div class="sidebar-header">
-            <a href="#" class="sidebar-back">
+            <a href="home" class="sidebar-back">
                 <i class="ri-arrow-left-line"></i> home
             </a>
         </div>
@@ -102,11 +102,16 @@
         <h2>Médicaments</h2>
         <hr class="line">
         <div class="prescription-fields">
-        <label class="name">Nom</label>
-        <label class="dosage">Dosage par jour</label>
-        <input type="text">
+            <label class="name">Nom</label>
+            <label class="dosage">Dosage par jour</label>
+            <input type="text">
+        </div>
     </div>
+
+    <div class="save">
+        <button class="button-save" (click)="onButtonClick()">Enregistrer</button>
     </div>
+      
   
     
   
