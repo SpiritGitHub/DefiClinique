@@ -1,0 +1,54 @@
+<div class="general">
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <a href="#" class="sidebar-back">
+                <i class="ri-arrow-left-line"></i> home
+            </a>
+        </div>
+
+        <h3>Menu</h3>
+        <nav class="nav-menu">
+            <ul>
+                <li class="nav-item active">
+                    <a href="principal/dashbord">
+                        <i class="ri-dashboard-line"></i> Dashboard
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="principal/consultation">
+                        <i class="ri-contacts-book-line"></i> Rendez-vous
+                    </a>
+                </li>
+            </ul>
+            <div class="setting">
+                <hr class="h">
+                <li class="nav-item">
+                    <a href="#">
+                        <i class="ri-settings-3-line"></i> Paramètres
+                    </a>
+                </li>
+            </div>
+        </nav>
+        <div class="sidebar-footer">
+            <a href="#" class="sidebar-logo">
+                <img src="./assets/+LO GO.png" alt="Logo"><span>App Name</span>
+            </a>
+        </div>
+        <div class="dashboard">
+            <span>Dashboard</span>
+            <div class="search-bar">
+              <input type="search" placeholder="search medical records...">
+              <i (click)="search()" class="ri-search-2-line"></i>
+            </div>
+            <div class="message">
+              <i class="ri-message-2-line"></i>
+            </div>
+            <div class="vertical-line">
+            </div>
+            <div class="profile">
+                <img src="./assets/admin_pic.jpg">
+            </div>
+            <router-outlet></router-outlet>
+        </div>
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">     
+</div>

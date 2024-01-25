@@ -27,6 +27,7 @@
             "styles": [
               "@angular/material/prebuilt-themes/indigo-pink.css",
               "projects/deficlinic/src/styles.css"
+
             ],
             "scripts": [],
             "server": "projects/deficlinic/src/main.server.ts",

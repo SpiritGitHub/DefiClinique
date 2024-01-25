@@ -1,0 +1,132 @@
+
+.patient-info-container {
+  background: rgba(239, 239, 239, 1);
+  width: 1000px;
+  height: 570px;
+  margin-top: 65px;
+  margin-bottom: 40px;
+  margin-left: -1065px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.haut{
+  display: flex;
+}
+.profil{
+  height: 150px;
+  width: 200px;
+  margin-top:30px;
+  margin-left: 15px;
+}
+.profil img{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-top: 25px;
+  margin-left: 50px;
+  object-fit: cover;
+  
+}
+.cote1{
+  margin-left: 30px;
+}
+.cote2{
+  margin-left: 180px;
+}
+.form-container {
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 700px;
+  margin-left:20px;
+}
+
+form{
+  display: flex;
+  padding: 10px;
+}
+
+.form-group {
+  margin-bottom: 5px;
+  padding: 5px;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+.form-group input {
+  width: 150%;
+  padding: 2px;
+  border-radius: 4px;
+  background-color: rgba(234, 234, 234, 1);
+  border: 1px solid #ddd;
+  box-sizing: border-box; /* Makes sure the padding does not affect the overall width */
+}
+.container {
+  background: rgba(234, 234, 234, 1);
+  padding: 10px;
+  margin-top: 1px;
+  margin-bottom: 20px;
+  width: 1000px;
+}
+.container textarea{
+  width: 70%;
+  height: 60px;
+  margin-top: -15px;
+}
+.section-title {
+  font-size: 18px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+.form-group {
+  margin-bottom: 15px;
+}
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+input[type="text"], textarea {
+  width: 10%;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.half-width {
+  float: left;
+  width: 48%;
+  margin-right: 4%;
+}
+.half-width input {
+  float: left;
+  width: 40%;
+}
+.half-width textarea {
+  float: left;
+  width: 60%;
+  margin-left: 500px;
+  margin-top: -100px;
+}
+
+.form-group .half-width textarea{
+  width: 100px;
+  height: 60px;
+}
+.half-width:last-child {
+  margin-right: 0;
+}
+.clear {
+  clear: both;
+}
+textarea {
+  height: 30px;
+}
+.dernier{
+  display: flex;
+  margin: 0 0 35px 0;
+  background-color: rgba(234, 234, 234, 1);
+  width: 100%;
+  height: 20%;
+  margin-top: -100px;
+}

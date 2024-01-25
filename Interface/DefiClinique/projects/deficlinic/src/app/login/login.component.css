@@ -4,34 +4,37 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-image: url('/assets/docteur.jpg'); /* Assurez-vous que le chemin est correct */
+    background-image: url('/assets/docteur.jpg'); 
     background-size: cover;
     background-position: center;
   }
   
   .header {
     text-align: center;
-    margin-bottom: 20px; /* Ajustez selon l'espacement souhaité */
+    margin-bottom: 20px; 
   }
   
   .logo {
     font-weight: bold;
-    color: white; /* Couleur blanche pour le logo */
+    color: white; 
   }
-  
+  .go{
+    color: red;
+  }
   .app-name {
-    font-size: 1.5rem; /* Taille de police accrue pour le nom de l'application */
-    color: white; /* Couleur blanche pour le nom de l'application */
+    font-size: 1.5rem; 
+    color: white;
   }
   
   .form-container {
-    background-color: black; /* Fond noir translucide pour le conteneur du formulaire */
+    background-color: black;
+    opacity: 85%;
     padding: 2rem;
-    width: 100%; /* Largeur ajustée pour le formulaire */
-    max-width: 400px; /* Largeur maximale pour la responsive design */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Ombre portée pour le conteneur */
+    width: 100%; 
+    max-width: 400px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
     color: white;
-    font-family: 'Arial', sans-serif; /* Choisissez la police qui correspond le mieux */
+    font-family: 'Arial', sans-serif; 
   }
   
   form {
@@ -41,19 +44,19 @@
   .input-group {
     display: flex;
     width: 10%;
-    /*justify-content: space-between;*/
+    
   }
   
   input {
     margin-bottom: 1rem;
-    padding: 1rem; /* Padding ajusté pour correspondre à l'image */
-    background: rgba(255, 255, 255, 0.2); /* Fond légèrement translucide */
-    color: white; /* Texte blanc */
-    border-radius: 10px; /* Rayon de bordure arrondi */
-    border: 1px solid rgba(255, 255, 255, 0.4); /* Bordure subtile */
+    padding: 1rem; 
+    background: rgba(255, 255, 255, 0.2); 
+    color: white; 
+    border-radius: 10px; 
+    border: 1px solid rgba(255, 255, 255, 0.4); 
    
   }
-  /* login.component.css */
+ 
 .input-container {
     position: relative;
   }
@@ -67,20 +70,26 @@
   
   .input-container input {
     padding-left: 30px;
-    /* Vos autres styles d'input ici */
-  }
   
+  }
+  .mode{
+    display: flex;
+  }
+  .mode input{
+
+    width: 146px;
+  }
   .button-group {
     display: flex;
     justify-content: space-between;
     flex: auto;
   }
   .input-group input:first-child {
-    margin-right: 10px; /* Espacement plus grand pour le premier input */
+    margin-right: 10px;
   }
   
   .input-group input:last-child {
-    margin-right: -0.5; /* Pas de marge pour le dernier input */
+    margin-right: -0.5; 
   }
   .input-icon-container {
     position: relative;
@@ -90,49 +99,52 @@
   
   .icon {
     position: absolute;
-    left: 10px; /* Adjust the value as needed */
+    left: 10px;
     color: #ffffff;
   }
   
   .input-icon-container input {
-    padding-left: 30px; /* Make room for the icon */
+    padding-left: 30px;
     width: 100%;
-    /* Rest of your input styles... */
+    
   }
   
   
   button {
-    padding: 1rem;
+    padding: 10px ;
     border: none;
-    border-radius: 20px; /* Rayon de bordure arrondi */
+    width: 150px;
+    height: 50px;
+    margin-left: 300px;
+    border-radius: 20px;
     margin-top: 1rem;
-    font-weight: bold; /* Texte en gras */
-    cursor: pointer; /* Curseur pointeur pour indiquer l'interactivité */
-    border-radius: 20px; /* Rayon de bordure arrondi */
+    font-weight: bold;
+    cursor: pointer; 
+    border-radius: 20px; 
 
   }
   
   .primary-button {
-    background-color: #0b335e; /* Bleu, par exemple pour le bouton 'Créer un compte' */
+    background-color: #0b335e;
     color: white;
   }
   
   .secondary-button {
-    background-color: #6c757d; /* Gris, par exemple pour le bouton 'Changer de méthode' */
+    background-color: #6c757d;
     color: white;
   }
   
   a {
-    color: #007bff; /* Assortir à la couleur du bouton principal */
-    text-decoration: none; /* Pas de soulignement */
+    color: #007bff; 
+    text-decoration: none; 
   }
   
-  /* Ajouter un hover effet pour les boutons */
+ 
   button:hover {
     opacity: 0.8;
   }
   
-  /* Ajouter un focus effet pour les input */
+  
   input:focus {
     border-color: #007bff;
     box-shadow: 0 0 8px rgba(0, 123, 255, 0.8);
