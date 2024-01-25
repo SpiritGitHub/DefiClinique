@@ -1,0 +1,69 @@
+<div class="doc-content">
+    <p>Add Doctor</p>
+    <form action="#">
+        <div class="fields">
+            <div class="field name">
+                <input type="nom" placeholder="Nom" required>
+            </div>
+            <div class="field prénom">
+                <input type="Prénom" placeholder="Prénom" required>
+            </div>
+            <div class="field num">
+                <input type="num" placeholder="Doc num" required>
+            </div>
+        </div>
+        <div class="fields">
+            <div class="field spécialité">
+                <input type="Spécialité" placeholder="Spécialité" required>
+            </div>
+            <div class="field Département">
+                <input type="Département" placeholder="Département" required>
+            </div>
+            <div class="field Mot de passe">
+                <input type="Mot de passe" placeholder="Mot de passe" required>
+            </div>
+        </div>
+        <div class="button">
+            <button class="submit">Ajouter</button>
+        </div>
+    </form>
+    
+    <div class="titre">Personnel</div>
+
+    <!-- datatable-->
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th></th> <!-- Colonne pour les checkboxes -->
+                    <th>Nom</th>
+                    <th>Prénom</th>
+                    <th>Doc Num</th>
+                    <th>Spécialités</th>
+                    <th>Mot de Passe</th>
+                    <th>Départements</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let data of dataSource; let i = index">
+                    <td><input type="checkbox" [id]="'check-' + i" [(ngModel)]="data.selected"></td>
+                    <td>{{ data.nom }}</td>
+                    <td>{{ data.prenom }}</td>
+                    <td>{{ data.docNum }}</td>
+                    <td class="spécialité">{{ data.specialites }}</td>
+                    <td class="password-cell">{{ data.motDePasse }}</td>
+                    <td>{{ data.departements }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="bouton">
+        <div class="button modif">
+            <button class="modif">Modifier</button>
+        </div>
+        <div class="button suppr">
+            <button class="suppr">Supprimer</button>
+        </div>
+    </div>
+
+</div>

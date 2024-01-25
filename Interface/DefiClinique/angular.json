@@ -3,31 +3,41 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "DefiClinique": {
+    "defi-clinique": {
       "projectType": "application",
       "schematics": {},
-      "root": "",
-      "sourceRoot": "src",
+      "root": "projects/defi-clinique",
+      "sourceRoot": "projects/defi-clinique/src",
       "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
             "outputPath": "dist/defi-clinique",
-            "index": "src/index.html",
-            "browser": "src/main.ts",
+            "index": "projects/defi-clinique/src/index.html",
+            "browser": "projects/defi-clinique/src/main.ts",
             "polyfills": [
               "zone.js"
             ],
-            "tsConfig": "tsconfig.app.json",
+            "tsConfig": "projects/defi-clinique/tsconfig.app.json",
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              "projects/defi-clinique/src/favicon.ico",
+              "projects/defi-clinique/src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "projects/defi-clinique/src/custom-theme.scss",
+              "projects/defi-clinique/src/styles.css",
+              "node_modules/datatables.net-dt/css/jquery.dataTables.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/datatables.net/js/jquery.dataTables.min.js"
+            ],
+            "server": "projects/defi-clinique/src/main.server.ts",
+            "prerender": true,
+            "ssr": {
+              "entry": "projects/defi-clinique/server.ts"
+            }
           },
           "configurations": {
             "production": {
@@ -57,10 +67,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "DefiClinique:build:production"
+              "buildTarget": "defi-clinique:build:production"
             },
             "development": {
-              "buildTarget": "DefiClinique:build:development"
+              "buildTarget": "defi-clinique:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -68,7 +78,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "DefiClinique:build"
+            "buildTarget": "defi-clinique:build"
           }
         },
         "test": {
@@ -78,18 +88,21 @@
               "zone.js",
               "zone.js/testing"
             ],
-            "tsConfig": "tsconfig.spec.json",
+            "tsConfig": "projects/defi-clinique/tsconfig.spec.json",
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              "projects/defi-clinique/src/favicon.ico",
+              "projects/defi-clinique/src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "projects/defi-clinique/src/styles.css"
             ],
             "scripts": []
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "c9a9df35-2613-4b69-ba62-4c96eeba4dad"
   }
 }
