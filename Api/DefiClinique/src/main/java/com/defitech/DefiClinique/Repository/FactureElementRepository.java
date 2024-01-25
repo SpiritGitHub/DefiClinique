@@ -1,6 +1,6 @@
-package com.defitech.DefiClinique.Bernard.repository;
+package com.defitech.DefiClinique.Repository;
 
-import com.defitech.DefiClinique.Bernard.model.FactureElement;
+import com.defitech.DefiClinique.Model.FactureElement;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

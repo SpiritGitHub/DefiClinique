@@ -1,7 +1,7 @@
-package com.defitech.DefiClinique.Bernard.controller;
+package com.defitech.DefiClinique.controller;
 
-import com.defitech.DefiClinique.Bernard.model.ClinicService;
-import com.defitech.DefiClinique.Bernard.service.ClinicServiceService;
+import com.defitech.DefiClinique.Model.ClinicService;
+import com.defitech.DefiClinique.service.ClinicServiceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

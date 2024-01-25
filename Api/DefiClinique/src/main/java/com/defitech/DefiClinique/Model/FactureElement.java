@@ -1,4 +1,4 @@
-package com.defitech.DefiClinique.Bernard.model;
+package com.defitech.DefiClinique.Model;
 
 import jakarta.persistence.*;
 import lombok.*;

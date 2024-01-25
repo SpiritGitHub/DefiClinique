@@ -1,8 +1,8 @@
-package com.defitech.DefiClinique.Bernard.service;
+package com.defitech.DefiClinique.service;
 
-import com.defitech.DefiClinique.Bernard.model.Facture;
-import com.defitech.DefiClinique.Bernard.model.FactureElement;
-import com.defitech.DefiClinique.Bernard.repository.FactureRepository;
+import com.defitech.DefiClinique.Model.Facture;
+import com.defitech.DefiClinique.Model.FactureElement;
+import com.defitech.DefiClinique.Repository.FactureRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

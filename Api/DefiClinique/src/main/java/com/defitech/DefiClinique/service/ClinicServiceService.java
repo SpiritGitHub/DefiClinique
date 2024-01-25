@@ -1,7 +1,7 @@
-package com.defitech.DefiClinique.Bernard.service;
+package com.defitech.DefiClinique.service;
 
-import com.defitech.DefiClinique.Bernard.model.ClinicService;
-import com.defitech.DefiClinique.Bernard.repository.ClinicServiceRepository;
+import com.defitech.DefiClinique.Model.ClinicService;
+import com.defitech.DefiClinique.Repository.ClinicServiceRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
