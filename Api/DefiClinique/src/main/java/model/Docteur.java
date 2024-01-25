@@ -1,9 +1,7 @@
 package model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class Docteur {
@@ -12,17 +10,18 @@ public class Docteur {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String firstName;
-    private String lastName;
-    private String specialite;
+    private String nom;
+
+    private String prenom;
+
+    private List<RendezVous> rendezVousList;
 
     public Docteur() {
     }
 
-    public Docteur(String firstName, String lastName, String specialite) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.specialite = specialite;
+    public Docteur(String nom, String prenom) {
+        this.nom = nom;
+        this.prenom = prenom;
     }
 
     public Long getId() {
@@ -33,37 +32,27 @@ public class Docteur {
         this.id = id;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getNom() {
+        return nom;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setNom(String nom) {
+        this.nom = nom;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getPrenom() {
+        return prenom;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setPrenom(String prenom) {
+        this.prenom = prenom;
     }
 
-    public String getSpecialite() {
-        return specialite;
+    public List<RendezVous> getRendezVousList() {
+        return rendezVousList;
     }
 
-    public void setSpecialite(String specialite) {
-        this.specialite = specialite;
-    }
-
-    @Override
-    public String toString() {
-        return "Docteur{" +
-                "id=" + id +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", specialite='" + specialite + '\'' +
-                '}';
+    public void setRendezVousList(List<RendezVous> rendezVousList) {
+        this.rendezVousList = rendezVousList;
     }
 }

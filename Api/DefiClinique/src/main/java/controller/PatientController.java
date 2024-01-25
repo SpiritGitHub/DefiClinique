@@ -11,12 +11,8 @@ import java.util.List;
 @RequestMapping("/api/patients")
 public class PatientController {
 
-    private final PatientService patientService;
-
     @Autowired
-    public PatientController(PatientService patientService) {
-        this.patientService = patientService;
-    }
+    private PatientService patientService;
 
     @GetMapping
     public List<Patient> getAllPatients() {
@@ -29,17 +25,22 @@ public class PatientController {
     }
 
     @PostMapping
-    public Patient addPatient(@RequestBody Patient patient) {
-        return patientService.addPatient(patient);
-    }
-
-    @PutMapping("/{id}")
-    public Patient updatePatient(@PathVariable Long id, @RequestBody Patient updatedPatient) {
-        return patientService.updatePatient(id, updatedPatient);
+    public Patient savePatient(@RequestBody Patient patient) {
+        return patientService.savePatient(patient);
     }
 
     @DeleteMapping("/{id}")
     public void deletePatient(@PathVariable Long id) {
         patientService.deletePatient(id);
+    }
+
+    @GetMapping("/stats/total")
+    public int getTotalPatients() {
+        return patientService.getTotalPatients();
+    }
+
+    @GetMapping("/stats/gender-distribution")
+    public List<Object[]> getGenderDistribution() {
+        return patientService.getGenderDistribution();
     }
 }

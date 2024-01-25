@@ -29,24 +29,14 @@ public class PatientStatisticsServiceImpl implements PatientStatisticsService {
         return 0;
     }
 
-    //Méthode pour le repartition du genre
     @Override
-    public Map<String, Long> getGenderDistribution() {
-        List<Object[]> genderDistribution = patientRepository.getGenderDistribution();
-        Map<String, Long> distributionMap = new HashMap<>();
-
-        for (Object[] row : genderDistribution) {
-            String gender = (String) row[0];
-            Long count = (Long) row[1];
-            distributionMap.put(gender, count);
-        }
-
-        return distributionMap;
+    public List<Object[]> getGenderDistribution() {
+        return patientRepository.getGenderDistribution();
     }
 
-    @Override
-    public long getNewPatientsCountByPeriod(LocalDate startDate, LocalDate endDate) {
-        return patientRepository.countNewPatientsByPeriod(startDate, endDate);
-    }
+   // @Override
+    //public long getNewPatientsCountByPeriod(LocalDate startDate, LocalDate endDate) {
+     //   return patientRepository.countNewPatientsByPeriod(startDate, endDate);
+    //}
 
 }

@@ -1,11 +1,11 @@
 package service;
 
 import java.time.LocalDate;
-import java.util.Map;
+import java.util.List;
 
 public interface PatientStatisticsService extends StatisticsService {
 
     int getPatientCount();
-    Map<String, Long> getGenderDistribution();
-    long getNewPatientsCountByPeriod(LocalDate startDate, LocalDate endDate);
+    List<Object[]> getGenderDistribution();
+    //ong getNewPatientsCountByPeriod(LocalDate startDate, LocalDate endDate);
 }

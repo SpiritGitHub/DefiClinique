@@ -5,13 +5,15 @@ import java.util.List;
 
 public interface PatientService {
 
+    Patient savePatient(Patient patient);
+
     List<Patient> getAllPatients();
 
     Patient getPatientById(Long id);
 
-    Patient addPatient(Patient patient);
-
-    Patient updatePatient(Long id, Patient updatedPatient);
-
     void deletePatient(Long id);
+
+    int getTotalPatients();
+
+    List<Object[]> getGenderDistribution();
 }
