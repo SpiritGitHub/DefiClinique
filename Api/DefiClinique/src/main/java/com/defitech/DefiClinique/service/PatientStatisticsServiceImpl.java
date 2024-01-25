@@ -1,13 +1,10 @@
-package service;
+package com.defitech.DefiClinique.service;
 
+import com.defitech.DefiClinique.repository.PatientRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import repository.PatientRepository;
 
-import java.time.LocalDate;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 @Service
 public class PatientStatisticsServiceImpl implements PatientStatisticsService {

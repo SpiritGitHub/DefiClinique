@@ -1,6 +1,5 @@
-package service;
+package com.defitech.DefiClinique.service;
 
-import java.time.LocalDate;
 import java.util.List;
 
 public interface PatientStatisticsService extends StatisticsService {

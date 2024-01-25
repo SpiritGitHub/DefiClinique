@@ -1,6 +1,6 @@
-package repository;
+package com.defitech.DefiClinique.repository;
 
-import model.Clinique;
+import com.defitech.DefiClinique.model.Clinique;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

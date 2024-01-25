@@ -1,10 +1,10 @@
-package controller;
+package com.defitech.DefiClinique.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import service.RendezVousStatisticsService;
+import com.defitech.DefiClinique.service.RendezVousStatisticsService;
 
 @RestController
 @RequestMapping("/api/statistics/rendezvous")

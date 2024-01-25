@@ -1,6 +1,6 @@
-package service;
+package com.defitech.DefiClinique.service;
 
-import model.Clinique;
+import com.defitech.DefiClinique.model.Clinique;
 
 import java.util.List;
 

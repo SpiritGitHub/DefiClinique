@@ -1,5 +1,5 @@
-package service;
-import model.RendezVous;
+package com.defitech.DefiClinique.service;
+import com.defitech.DefiClinique.model.RendezVous;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

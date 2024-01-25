@@ -1,6 +1,6 @@
-package repository;
+package com.defitech.DefiClinique.repository;
 
-import model.RendezVous;
+import com.defitech.DefiClinique.model.RendezVous;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

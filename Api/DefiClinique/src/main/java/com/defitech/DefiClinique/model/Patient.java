@@ -1,7 +1,7 @@
-package model;
+package com.defitech.DefiClinique.model;
 
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
     @Entity
     public class Patient {

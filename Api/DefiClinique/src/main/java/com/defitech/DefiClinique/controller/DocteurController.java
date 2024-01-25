@@ -1,7 +1,7 @@
-package controller;
+package com.defitech.DefiClinique.controller;
 
-import model.Docteur;
-import service.DocteurService;
+import com.defitech.DefiClinique.service.DocteurService;
+import com.defitech.DefiClinique.model.Docteur;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

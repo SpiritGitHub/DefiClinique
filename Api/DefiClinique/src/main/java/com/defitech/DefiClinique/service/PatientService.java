@@ -1,6 +1,7 @@
-package service;
+package com.defitech.DefiClinique.service;
 
-import model.Patient;
+import com.defitech.DefiClinique.model.Patient;
+
 import java.util.List;
 
 public interface PatientService {

@@ -1,9 +1,9 @@
-package service;
+package com.defitech.DefiClinique.service;
 
-import model.Docteur;
+import com.defitech.DefiClinique.model.Docteur;
+import com.defitech.DefiClinique.repository.DocteurRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import repository.DocteurRepository;
 
 import java.util.List;
 

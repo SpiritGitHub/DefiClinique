@@ -1,9 +1,9 @@
-package service;
+package com.defitech.DefiClinique.service;
 
-import model.RendezVous;
+import com.defitech.DefiClinique.model.RendezVous;
+import com.defitech.DefiClinique.repository.RendezVousRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import repository.RendezVousRepository;
 
 import java.time.Duration;
 import java.util.HashMap;

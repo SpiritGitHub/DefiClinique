@@ -1,9 +1,9 @@
-package controller;
+package com.defitech.DefiClinique.controller;
 
-import model.RendezVous;
+import com.defitech.DefiClinique.model.RendezVous;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import service.RendezVousService;
+import com.defitech.DefiClinique.service.RendezVousService;
 
 import java.util.List;
 

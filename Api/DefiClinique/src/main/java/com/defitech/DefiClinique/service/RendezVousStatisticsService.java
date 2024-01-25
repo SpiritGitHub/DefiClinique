@@ -1,4 +1,4 @@
-package service;
+package com.defitech.DefiClinique.service;
 
 import java.util.Map;
 
