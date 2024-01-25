@@ -1,0 +1,139 @@
+.doc-content{
+    margin-left: 17px;
+
+}
+.doc-content p{
+    margin: 20px 0 20px 31px;
+    font-size: medium;
+    font-weight: 24px;
+    color: rgba(0, 16, 57, 1);
+
+}
+.fields{
+    display: flex;
+    background-color: rgba(234, 234, 234, 1);
+    padding: 0 15px 30px 50px;
+}
+.field input{
+    margin: 15px 20px 0px 30px;
+    width: 255px;
+    outline: none;
+    border: none;
+    background: none;
+    border-bottom: 2px solid black;
+    font-size: 17px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+form .button button{
+    margin-left: 85.5%;
+    border: none;
+    padding: 5px 50px 5px 50px;
+    margin-top: 15px;
+    background: rgba(0, 155, 43, 1);
+    color: #fff;
+    font-size: 20px;
+    font-size: medium;
+    font-weight: 28;
+    border-radius: 55px 55px 55px 55px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/*----------------------------------------------------------------*/
+/*----------------------------------------------------------------*/
+/*----------------------------------------------------------------*/
+
+/* datatable.component.css */
+.titre{
+    margin: 15px 0 20px 31px;
+    font-size: medium;
+    font-weight: 24px;
+    color: rgba(0, 16, 57, 1);
+}
+
+/* styles.css ou datatable.component.css */
+.table-container {
+    max-height: 260px;
+    overflow-y: auto; /* Permet un défilement horizontal si le tableau est trop large */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; /* Supprime l'espacement entre les bordures des cellules */
+}
+
+thead {
+    background-color: #ffffff; /* Couleur de fond pour l'en-tête du tableau */
+    color: rgba(20, 0, 100, 1); /* Couleur du texte pour l'en-tête du tableau */
+}
+
+tbody{
+    max-height: 200px;
+    border-collapse: collapse;
+    overflow-x: auto;
+
+}
+
+th, td {
+    padding: 8px; /* Espacement à l'intérieur des cellules */
+    text-align: left; /* Alignement du texte à gauche */
+    border-bottom: 1px solid #ddd; /* Ligne de séparation entre les lignes */
+}
+
+tr:nth-child(odd) {
+    background-color: #f2f2f2; /* Couleur de fond pour les lignes impaires */
+}
+
+tr:nth-child(even) {
+    background-color: #ffffff; /* Couleur de fond pour les lignes paires */
+}
+
+tr:hover {
+    background-color: #ddd; /* Couleur de fond au survol d'une ligne */
+}
+
+input[type="checkbox"] {
+    margin-left: 10px; /* Espacement pour la case à cocher */
+}
+
+/* Ajout de styles supplémentaires pour les boutons et les inputs si nécessaire */
+input[type="text"], input[type="number"], select {
+    padding: 5px;
+    margin: 2px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.password-cell{
+    color: rgba(178, 0, 0, 0.74);
+}
+.spécialité{
+    color: rgba(4, 147, 1, 0.74);
+}
+
+.bouton{
+    display: flex;
+    margin-left: 150px;
+}
+
+.bouton button{
+    border-radius: 10px;
+    border: none;
+    margin: 20px;
+    padding: 5px 0 5px 0;
+    width: 300px;
+}
+
+.bouton .modif button{
+    cursor: pointer;
+    background: rgba(255, 107, 0, 1);
+    color: white;
+    transition: all 0.5s ease;
+}
+.bouton .suppr button{
+    cursor: pointer;
+    background: rgba(163, 0, 0, 1);
+    color: white;
+    transition: all 0.5s ease;
+}

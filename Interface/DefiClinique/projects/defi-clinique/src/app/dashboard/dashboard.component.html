@@ -1,0 +1,104 @@
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+<!--<div class="dash"> 
+
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <a routerLink="/home/menu" class="sidebar-back">
+                <i class="ri-arrow-left-line"></i> <span>Home</span>
+            </a>    
+        </div>
+        <h3>Menu</h3>
+        <nav class="nav-menu">
+            <ul>
+            </ul>
+            <div class="sidebar-footer">
+                <a href="#" class="sidebar-logo">
+                    <img src="../../assets/images/+LO GO.png" alt="Logo"> <span>App Name</span>
+                </a>
+            </div>
+        </nav>
+    </div>
+
+    <div class="dashboard">
+        <span>Dashboard</span>
+        <div class="search-bar">
+            <input type="search" placeholder="search medical records...">
+            <i (click)="search()" class="ri-search-2-line"></i>
+        </div>
+        <div class="message">
+            <i class="ri-message-2-line"></i>
+        </div>
+
+        <div class="vertical-line"></div>
+
+        <div class="profile">
+            <img src="../../assets/images/admin_pic.jpg">
+        </div>
+    </div>
+</div> -->
+
+<mat-sidenav-container class="dash">
+
+    <mat-sidenav opened mode="side" [style.width]="'250px'" class="sidebar">
+        <div class="sidebar-header">
+            <a href="home/menu" class="sidebar-back">
+            <i class="ri-arrow-left-line"></i> <span>Home</span>
+            </a>
+        </div>
+        <h3>Menu</h3>
+        <nav class="nav-menu">
+            <ul>
+                <li class="nav-item active">
+                    <a routerLink="/dashboard/dash-content">
+                        <i class="ri-dashboard-line"></i><span>Dashboard</span>
+                    </a>        
+                </li>
+                <li class="nav-item">
+                    <a routerLink="/dashboard/doc-mngmt">
+                        <i class="ri-stethoscope-line"></i><span>Doctors Ma...</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a routerLink="/dashboard/departement">
+                        <i class="ri-medicine-bottle-line"></i><span>Departements</span>
+                    </a>
+                </li>   
+                <div class="setting">
+                    <hr class="h">
+                    <li class="nav-item ">
+                        <a routerLink="/dashboard/settings">
+                            <i class="ri-settings-3-line"></i><span>Paramètres</span>
+                        </a>
+                    </li>
+                </div>
+            </ul> 
+            <div class="sidebar-footer">
+                <a href="#" class="sidebar-logo">
+                    <img src="../../assets/images/+LO GO.png" alt="Logo"> <span>App Name</span>
+                </a>
+            </div>
+        </nav>
+    </mat-sidenav>
+    
+    <mat-sidenav-content class="content">
+        <div class="dashboard">
+            <span>Dashboard</span>
+            <div class="search-bar">
+                <input type="search" placeholder="search medical records...">
+                <i (click)="search()" class="ri-search-2-line"></i>
+            </div>
+            <div class="message">
+                <i class="ri-message-2-line"></i>
+            </div>
+        
+            <div class="vertical-line"></div>
+        
+            <div class="profile">
+                <img src="../../assets/images/admin_pic.jpg">
+            </div>
+        </div>
+        <!-- Utilisation de router-outlet pour afficher le contenu dynamique-->
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>
