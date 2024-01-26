@@ -11,9 +11,12 @@
 
 [Docuentation Consultation-Traitement-Analyse-Dossiers Medicaux](https://documenter.getpostman.com/view/31344415/2s9YynkPfw)
 
+[Documentation Facture](https://documenter.getpostman.com/view/32470868/2s9YyqhMFy)
 
 [Documentation Patients](https://documenter.getpostman.com/view/32566889/2s9YypEhyh)
 
 [Documentation de projet_NOUDOUKOU.pdf](https://github.com/SpiritGitHub/DefiClinique/files/14064546/Documentation.de.projet_NOUDOUKOU.pdf)
 
 [PROJET D.pdf](https://github.com/SpiritGitHub/DefiClinique/files/14064605/PROJET.D.pdf)
+
+[AkakpogiseleDocumentation.pdf](https://github.com/SpiritGitHub/DefiClinique/files/14069599/AkakpogiseleDocumentation.pdf)
