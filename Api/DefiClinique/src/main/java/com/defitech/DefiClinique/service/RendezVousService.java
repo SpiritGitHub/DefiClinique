@@ -41,14 +41,14 @@ public class RendezVousService {
     public int getTotalRendezVous() {
         return rendezVousRepository.countRendezVous();
     }
-
+/*
     public List<Object[]> getRendezVousFrequencyByMedecin() {
         return rendezVousRepository.rendezVousFrequencyByMedecin();
     }
     public double getAverageWaitTime() {
         return rendezVousRepository.averageWaitTime();
     }
-
+*/
     public void deleteRendezVous(Long id) {
         rendezVousRepository.deleteById(id);
     }

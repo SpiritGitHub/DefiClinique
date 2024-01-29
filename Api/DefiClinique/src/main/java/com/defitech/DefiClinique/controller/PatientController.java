@@ -59,6 +59,7 @@ public class PatientController {
         return patientServiceIm.getTotalPatients();
     }
 
+    /*
     @GetMapping("/stats/age-distribution")
     public List<Object[]> getAgeDistribution() {
         return patientServiceIm.getAgeDistribution();
@@ -67,6 +68,6 @@ public class PatientController {
     @GetMapping("/stats/gender-distribution")
     public List<Object[]> getGenderDistribution() {
         return patientServiceIm.getGenderDistribution();
-    }
+    }*/
 
 }

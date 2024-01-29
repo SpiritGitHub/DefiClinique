@@ -12,9 +12,10 @@ public interface PatientRepo extends JpaRepository<Patient, Long> {
     @Query("SELECT COUNT(p) FROM Patient p")
     int countPatients();
 
+    /*
     @Query("SELECT COUNT(p), p.age FROM Patient p GROUP BY p.age")
     List<Object[]> ageDistribution();
 
     @Query("SELECT COUNT(p), p.gender FROM Patient p GROUP BY p.gender")
-    List<Object[]> genderDistribution();
+    List<Object[]> genderDistribution();*/
 }

@@ -17,10 +17,11 @@ public interface RendezVousRepository extends JpaRepository<RendezVous, Long> {
     @Query("SELECT COUNT(r) FROM RendezVous r")
     int countRendezVous();
 
+    /*
     @Query("SELECT COUNT(r), r.docteur FROM RendezVous r GROUP BY r.docteur")
     List<Object[]> rendezVousFrequencyByMedecin();
 
     @Query("SELECT AVG(r.waitTime) FROM RendezVous r WHERE r.waitTime IS NOT NULL")
     double averageWaitTime();
-
+*/
 }

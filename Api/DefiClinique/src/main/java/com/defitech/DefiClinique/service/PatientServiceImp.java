@@ -74,12 +74,12 @@ public class PatientServiceImp implements IPatientService {
     public int getTotalPatients() {
         return patientRepo.countPatients();
     }
-
+/*
     public List<Object[]> getAgeDistribution() {
         return patientRepo.ageDistribution();
     }
 
     public List<Object[]> getGenderDistribution() {
         return patientRepo.genderDistribution();
-    }
+    }*/
 }

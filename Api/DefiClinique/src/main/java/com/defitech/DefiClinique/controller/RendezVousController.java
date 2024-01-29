@@ -75,6 +75,7 @@ public class RendezVousController {
         return rendezVousService.getTotalRendezVous();
     }
 
+    /*
     @GetMapping("/stats/frequency-by-medecin")
     public List<Object[]> getRendezVousFrequencyByMedecin() {
         return rendezVousService.getRendezVousFrequencyByMedecin();
@@ -85,5 +86,5 @@ public class RendezVousController {
         return rendezVousService.getAverageWaitTime();
     }
 
-
+*/
 }

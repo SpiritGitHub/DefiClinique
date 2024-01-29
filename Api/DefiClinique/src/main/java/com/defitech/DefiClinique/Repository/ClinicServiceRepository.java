@@ -10,10 +10,8 @@ import java.util.Optional;
 @Repository
 public interface ClinicServiceRepository extends JpaRepository<ClinicService, Long> {
 
-    // Trouver un service par son nom
     Optional<ClinicService> findByNom(String nom);
 
-    // Trouver des services par type
     List<ClinicService> findByTypeService(String typeService);
 
 
