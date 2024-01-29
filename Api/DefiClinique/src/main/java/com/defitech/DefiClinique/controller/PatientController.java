@@ -2,6 +2,7 @@ package com.defitech.DefiClinique.controller;
 
 import com.defitech.DefiClinique.Model.Patient;
 import com.defitech.DefiClinique.service.IPatientService;
+import com.defitech.DefiClinique.service.PatientServiceImp;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -14,6 +15,8 @@ import java.util.List;
 public class PatientController {
 
     private final IPatientService patientService;
+
+    private final PatientServiceImp patientServiceIm;
 
     @PostMapping("/addPatient")
     public Patient addPatient(@RequestBody Patient patient) {
@@ -50,4 +53,20 @@ public class PatientController {
     public List<Patient> searchPatients(@RequestParam(value = "name", required = false) String name) {
         return patientService.searchPatientsByName(name);
     }
+
+    @GetMapping("/stats/total")
+    public int getTotalPatients() {
+        return patientServiceIm.getTotalPatients();
+    }
+
+    @GetMapping("/stats/age-distribution")
+    public List<Object[]> getAgeDistribution() {
+        return patientServiceIm.getAgeDistribution();
+    }
+
+    @GetMapping("/stats/gender-distribution")
+    public List<Object[]> getGenderDistribution() {
+        return patientServiceIm.getGenderDistribution();
+    }
+
 }

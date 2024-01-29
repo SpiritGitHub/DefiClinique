@@ -70,4 +70,20 @@ public class RendezVousController {
         }
     }
 
+    @GetMapping("/stats/total")
+    public int getTotalRendezVous() {
+        return rendezVousService.getTotalRendezVous();
+    }
+
+    @GetMapping("/stats/frequency-by-medecin")
+    public List<Object[]> getRendezVousFrequencyByMedecin() {
+        return rendezVousService.getRendezVousFrequencyByMedecin();
+    }
+
+    @GetMapping("/stats/average-wait-time")
+    public double getAverageWaitTime() {
+        return rendezVousService.getAverageWaitTime();
+    }
+
+
 }

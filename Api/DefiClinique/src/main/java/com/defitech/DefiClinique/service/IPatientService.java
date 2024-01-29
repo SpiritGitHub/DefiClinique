@@ -18,4 +18,5 @@ public interface IPatientService {
     Patient updatePatient(Long idPatient, Patient patientDetails);
 
     List<Patient> searchPatientsByName(String name);
+
 }
