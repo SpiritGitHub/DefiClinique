@@ -16,5 +16,6 @@ public interface FactureRepository extends JpaRepository<Facture, Long> {
     List<Facture> findByNomPatientAndDateFacturation(String nomPatient, Date date);
     Long countByNomPatient(String nomPatient);
     Optional<Facture> findByNumeroFacture(String numeroFacture);
+    Facture findTopByOrderByNumeroFactureDesc();
 
 }

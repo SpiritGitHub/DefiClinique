@@ -19,7 +19,10 @@ public class FactureService {
         this.factureRepository = factureRepository;
     }
 
+
     public Facture createFacture(Facture facture) {
+        String numeroFacture = generateNumeroFacture();
+        facture.setNumeroFacture(numeroFacture);
 
         if (facture.getElementsFacture() != null) {
             for (FactureElement element : facture.getElementsFacture()) {
@@ -52,5 +55,14 @@ public class FactureService {
         } else {
             throw new RuntimeException("Facture avec l'ID " + id + " n'existe pas.");
         }
+    }
+
+
+    private String generateNumeroFacture() {
+
+        Facture lastFacture = factureRepository.findTopByOrderByNumeroFactureDesc();
+        String lastNumero = lastFacture != null ? lastFacture.getNumeroFacture() : "FAC-00000";
+        int numero = Integer.parseInt(lastNumero.replace("FAC-", "")) + 1;
+        return String.format("FAC-%05d", numero);
     }
 }

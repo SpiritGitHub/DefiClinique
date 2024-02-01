@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1ad128f4-cc9f-42b9-8373-26b727e8b8a5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/DefiClinique/src/main/java/com/defitech/DefiClinique/configuration/AOPConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DefiClinique/src/main/java/com/defitech/DefiClinique/control/control.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DefiClinique/src/main/java/com/defitech/DefiClinique/entite/Patient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DefiClinique/src/main/java/com/defitech/DefiClinique/repositorie/PatientRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DefiClinique/src/main/java/com/defitech/DefiClinique/service/IPatientService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DefiClinique/src/main/java/com/defitech/DefiClinique/service/PatientServiceImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DefiClinique/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/DefiClinique/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/dbnavigator.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,15 +36,15 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Chaib__AMAO",
+    "git-widget-placeholder": "Api",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/DefiClinique"
+    "last_opened_file_path": "C:/Users/Bernardo/Documents/GitHub/DefiClinique/Api"
   }
 }]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-4f524021" />
+        <option value="jdk-21.0.1-openjdk-21.0.1-4caba194b151-23eed401" />
       </set>
     </attachedChunks>
   </component>
