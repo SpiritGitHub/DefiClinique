@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz@0,8..144;1,8..144&display=swap');
+.tout {
+    display: flex;
+    position: fixed;
+    width: 900px;
+    height: 600px;
+    margin-left: -40px;
+    margin-top: -1600px;
+  }
+
+  .info {
+    margin-left: 40px;
+    margin-top: 10px;
+    width: 720px;
+    height: 200px;
+    background: linear-gradient(to right, rgba(0, 41, 255, 1), rgba(30, 211, 1, 0.6));
+  }
+  
+.info span {
+  font-size: 20px;
+  font-family: 'Arvo', serif;
+  color: #fff;
+  position: relative;
+  font-weight: bold;
+  top: 10px;
+  margin-left: 30px;
+}
+
+h2 {
+  font-size: 40px;
+  font-family: 'Roboto Serif', serif;
+  color: #fff;
+  position: relative;
+  top: 0px;
+  margin-left: 30px;
+}
+
+.B {
+  width: 361px;
+  height: 1.8px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.00) 0%, #FFF 13.02%, rgba(255, 255, 255, 0.00) 100%);
+  position: relative;
+  top: 0px;
+  border: none;
+  margin: -15px 0 5px 0;
+}
+
+p {
+  font-size: 12px;
+  width: 558px;
+  font-family: 'Roboto Serif', serif;
+  color: #fff;
+  position: relative;
+  top: 0px;
+  color: #FFF;
+  margin: 15px 0 0 30px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.dashboard-content { 
+  margin-left: 250px; 
+  width: 938px; 
+  height: 323px; 
+  object-fit: cover; 
+} 
+ 
+ 
+.image img{ 
+  height: 200px; 
+  width: 600px; 
+  object-fit: cover; 
+  padding: 45px; 
+  top: 20%; 
+  
+} 
+ 
+.message-overlay { 
+  position: absolute; 
+  width: 500px; 
+  top: 43px; 
+  bottom: 430px; 
+  left: 44%; 
+  transform: translateX(-50%); 
+  background-color: rgba(0, 0, 0, 0);  
+  color: white; 
+  padding: 45px; 
+  text-align: center; 
+   
+   
+ 
+} 
+ 
+.menup{ 
+  display: flex; 
+  padding-left: 240px;  
+  width: 500px; 
+  margin-top: 230px;
+  margin-left: -180px;
+  position: fixed;
+} 
+ 
+.box{ 
+  align-items: center; 
+  cursor: pointer; 
+  padding: 15px; 
+  padding-top: 0; 
+  margin-left: -20px;
+} 
+ 
+.box .text{ 
+  align-items: center; 
+  display: flex; 
+  font-size: 20px; 
+  padding: 20px 44px 20px 44px; 
+  background: rgba(239, 239, 239, 1);
+  margin-left: -10px;
+} 
+ 
+ 
+img { 
+  height: 70px; 
+  width: 70px; 
+  padding-right: 15px; 
+}
+/* styles.css ou datatable.component.css */
+.table-container {
+  max-height: 190px;
+  margin-left: -720px;
+  margin-top: 400px;
+ /* overflow-y: scroll;*/
+  overflow-x: hidden; 
+}
+
+table {
+  width: 150px;
+  border-collapse: collapse; /* Supprime l'espacement entre les bordures des cellules */
+}
+
+thead {
+  background-color: #ffffff; /* Couleur de fond pour l'en-tête du tableau */
+  color: rgba(20, 0, 100, 1); /* Couleur du texte pour l'en-tête du tableau */
+}
+
+tbody{
+  max-height: 200px;
+  border-collapse: collapse;
+  overflow-x: auto;
+
+}
+.bouton{
+  display: flex;
+  
+}
+.status-en-cours {
+  color: red;
+}
+
+.status-complete {
+  color: green;
+}
+
+th, td {
+  padding: 5px 32px 5px 32px; /* Espacement à l'intérieur des cellules */
+  text-align: left; /* Alignement du texte à gauche */
+  border-bottom: 1px solid #ddd; /* Ligne de séparation entre les lignes */
+}
+
+tr:nth-child(odd) {
+  background-color: #f2f2f2; /* Couleur de fond pour les lignes impaires */
+}
+
+tr:nth-child(even) {
+  background-color: #ffffff; /* Couleur de fond pour les lignes paires */
+}
+
+tr:hover {
+  background-color: #ddd; /* Couleur de fond au survol d'une ligne */
+}
+
+input[type="checkbox"] {
+  margin-left: 10px; /* Espacement pour la case à cocher */
+}
+
+/* Ajout de styles supplémentaires pour les boutons et les inputs si nécessaire */
+input[type="text"], input[type="number"], select {
+  padding: 5px;
+  margin: 2px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.password-cell{
+  color: rgba(178, 0, 0, 0.74);
+}
+.spécialité{
+  color: rgba(4, 147, 1, 0.74);
+}
+
+.status-completed {
+    color: green;
+}
+.status-in-progress {
+    color: red;
+}
+.icon-edit {
+    color: #4CAF50; /* Vert */
+    cursor: pointer;
+}
+
+.icon-delete {
+    color: #F44336; /* Rouge */
+    cursor: pointer;
+}
+
+mat-icon {
+    margin-right: 10px;
+}
+ .calendrier{
+  background-color: rgba(239, 239, 239, 1);
+  width: 325px;
+  height: 640px;    
+  margin-left: 780px;
+  margin-top: 10px;
+  position: fixed;
+ }
+ .calendar{
+  margin-left: 50px;
+ }
+ .profil{
+    background-color:white;
+    width: 250px;
+    height: 160px;
+    margin-top:-10px;
+    margin-left: 40px;
+    position: fixed;
+ }
+.cadre{
+    padding-top:5px;
+    padding-left: 50px;  
+}
+
+h4{
+    font-family: 'Arvo', serif;
+    font-size: 20px;
+}
+h5{
+    margin-top: -15px;
+    color: green;
+    font-size: 15px;
+    
+}
+.cadre p{
+    color: #F44336;
+    margin-top: -10px;
+    margin-left: 10px;
+}
+
+.profil1{
+    background-color:white;
+    width: 250px;
+    height: 160px;
+    margin-top: 155px;
+    margin-left: 40px;
+ }

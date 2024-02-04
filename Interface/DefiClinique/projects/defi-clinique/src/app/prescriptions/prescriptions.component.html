@@ -1,0 +1,119 @@
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+<section class="dash">
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <a href="home-P" class="sidebar-back">
+                <i class="ri-arrow-left-line"></i> home
+            </a>
+        </div>
+
+        <h3>Menu</h3>
+        <nav class="nav-menu">
+            <ul>
+                <li class="nav-item">
+                    <a href="home-P">
+                        <i class="ri-dashboard-line"></i> Dashboard
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="dashboard-P">
+                        <i class="ri-stethoscope-line"></i> Patients Ma...
+                    </a>
+                </li>
+                <li class="nav-item active">
+                    <a href="prescriptions">
+                        <i class="ri-medicine-bottle-line"></i> Prescription
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="labo">
+                        <i class="ri-microscope-line"></i> Laboratoire
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="appointment">
+                        <i class="ri-contacts-book-line"></i> Rendez-vous
+                    </a>
+                </li>
+            </ul>
+            <div class="setting">
+                <hr class="h">
+                <div class="nav-item">
+                    <a href="#">
+                        <i class="ri-settings-3-line"></i> Paramètres
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <div class="sidebar-footer">
+            <a href="#" class="sidebar-logo">
+                <img src="../../assets/+LO GO.png" alt="Logo"><span>App Name</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- doctor-card.component.html -->
+    <div class="doctor-card">
+        <h2>Dr. James Lewis</h2>
+        <div class="speciality-line">
+        <span class="speciality">Spécialité</span>
+        </div>
+        <p class="id">ID 22354642</p>
+        <div class="logo-container">
+        <img src="../../assets/+LO GO.png">
+        </div>
+    </div>
+  
+    <!-- patient-form.component.html -->
+    <div class="patient-form">
+        <div class="form-group1">
+        <label for="patientName">Nom du patient</label>
+        <input type="text">
+        </div>
+    
+        <div class="form-group2">
+        <label for="appointmentDate">Date</label>
+        <input type="date" id="appointmentDate">
+        </div>
+    
+        <div class="form-group3">
+        <label for="patientAge">Age</label>
+        <input type="number">
+        </div>
+    
+        <div class="form-group4">
+        <label for="diagnosis">Diagnostic</label>
+        <input type="text">
+        </div>
+    
+        <div class="form-group5">
+        <label for="gender">Genre</label>
+        <select id="gender">
+            <option value="">Sélectionnez</option>
+            <option value="male">Masculin</option>
+            <option value="female">Féminin</option>
+        </select>
+        </div>
+    </div>
+
+    <!-- prescription.component.html -->
+    <div class="prescription-container">
+        <h2>Médicaments</h2>
+        <hr class="line">
+        <div class="prescription-fields">
+            <label class="name">Nom</label>
+            <label class="dosage">Dosage par jour</label>
+            <input type="text">
+        </div>
+    </div>
+
+    <div class="save">
+        <button class="button-save" (click)="onButtonClick()">Enregistrer</button>
+    </div>
+      
+  
+    
+  
+
+</section>

@@ -1,0 +1,109 @@
+/* General Reset */
+* {
+    max-width: 100vh;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+  
+  /* Container Styles */
+  .Box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
+    width: 95vh;
+    background-color: #e6f0f6;
+  }
+  
+  .image img {
+    margin-left: 13rem;
+    width: 400px;
+    height: auto;
+    border-radius: 20px;
+  }
+  
+  /* Form Styles */
+  .department-form {
+    background: #fff;
+    padding: 2rem;
+    margin-left: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 350px;
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333;
+  }
+  
+  .form-group input[type="text"],
+  .form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    transition: border-color 0.3s;
+  }
+  
+  .form-group input[type="text"]:focus,
+  .form-group textarea:focus {
+    border-color: #7a9cc6;
+    outline: none;
+  }
+  
+  .form-group textarea {
+    resize: none;
+
+  }
+  
+  .form-group input[type="file"] {
+    border: none;
+  }
+  
+  .form-group small {
+    display: block;
+    margin-top: 0.5rem;
+    color: #666;
+  }
+  
+  /* Button Styles */
+  button {
+    background-color: #4460a0;
+    color: #fff;
+    border: none;
+    padding: 1rem 1.5rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+  }
+  
+  button:hover {
+    background-color: #36508a;
+  }
+  
+  button:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+  }
+  
+  /* Responsive adjustments can be placed here */
+  @media (max-width: 768px) {
+    .Box {
+      height: auto;
+    }
+  
+    .department-form {
+      width: auto;
+      margin: 2rem;
+    }
+  }
+  

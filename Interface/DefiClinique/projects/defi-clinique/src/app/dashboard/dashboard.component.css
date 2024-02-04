@@ -1,0 +1,186 @@
+.mat-sidenav-container {
+    display: flex;
+    font-family: Geomanist, 'Times New Roman', Times, serif;
+    height: 680px;
+  }
+  
+  .mat-sidenav {
+      border: none;
+      width: 250px;
+      padding-top: 30px;
+      margin-top: 10px;
+      margin-left: 0.5rem;
+      padding-bottom: 20px;
+      background-color: #EFEFEF;
+      height: 660px;
+      display: block;
+      padding: 7px 0px;
+      border-radius: 20px  0px 0px 20px;
+  }
+  
+  .mat-sidenav .sidebar-header {
+    padding: 10px 0 10px 15px;
+    background-color: #EFEFEF;
+    border-radius: 20px 0 0 20px;
+  }
+  
+  .mat-sidenav .sidebar-back {
+    text-decoration: none;
+    color: rgba(20, 0, 100, 1);
+    display: flex;
+    font-size: 18px;
+    font-weight: bolder;
+    align-items: center;
+  }
+  
+  .mat-sidenav .sidebar-back span {
+    margin-left: 10px;
+    font-size: 15px;
+  }
+  
+  .mat-sidenav h3 {
+    padding-left: 30px;
+    font-size: 25px;
+    font-family: Geomanist, 'Times New Roman', Times, serif;
+    color: rgba(20, 0, 100, 1);
+  }
+  
+  .mat-sidenav .nav-menu ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .mat-sidenav .nav-item {
+    padding: 1px 0 5px 0;
+  }
+  
+  .mat-sidenav .nav-item a {
+    text-decoration: none;
+    color: rgba(20, 0, 100, 1);
+    display: flex;
+    font-size: 20px;
+    align-items: center;
+    padding: 0.5rem;
+    transition: background-color (0.3s);
+  }
+  
+  .mat-sidenav .nav-item a:hover,
+  .mat-sidenav .nav-item.active a {
+    background-color: #B10000;
+    border-left: 4px solid rgba(20, 0, 100, 1);
+    width: 91.5%;
+    color: #fff;
+  }
+  
+  .mat-sidenav .nav-item a i {
+    font-size: 30px;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  
+  .mat-sidenav .setting {
+    padding-top: 220px;
+  }
+  
+  .mat-sidenav .h {
+    width: 210px;
+    height: 0.2px;
+    color: rgba(0, 0, 0, 0.47);
+    margin-right: auto;
+    background-color: rgba(0, 0, 0, 0.47);
+  }
+  
+  .mat-sidenav .sidebar-footer {
+    padding: 2rem 0 0 0.7rem;
+    text-align: center;
+  }
+  
+  .mat-sidenav .sidebar-logo {
+    text-decoration: none;
+    display: flex;
+  }
+  .mat-sidenav .sidebar-logo img{
+    width: 30px;
+  }
+  
+  .mat-sidenav .sidebar-logo span {
+    font-size: 20px;
+    color: rgba(0, 16, 57, 1);
+    padding-left: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    opacity: 40%;
+  }
+  
+  .dashboard {
+      display: flex;
+      margin-left: 17px;
+      background-color: #EAEAEA;
+      margin-top: 10px;
+      width: 1046px;
+      height: 50px;
+      border-radius: 0 20px 0 0;
+      padding: 0 1rem;
+  }
+  
+  .dashboard span {
+      margin-top: 15px;
+      padding-left: 15px;
+      font-size: 17px;
+      color: rgba(20, 0, 100, 1);
+  }
+  
+  input[type="search"] {
+      border: none;
+      background: none;
+      width: 250px;
+      height: 16px;
+      font-size: 20px;
+      opacity: 26%;
+      margin-left: 550px;
+      margin-top: 18px;
+  }
+  
+  .search-bar {
+      display: flex;
+  }
+  
+  .search-bar  i{
+      cursor: pointer;
+      font-size: 25px;
+      color: rgba(20, 0, 100, 1);
+      margin-top: 14px;
+      background: none;
+      
+  }
+  
+  .message{
+      cursor: pointer;
+      color: rgba(20, 0, 100, 1);
+      margin-top: 14px;
+      font-size: 25px;
+      padding-left: 15px;
+  
+  }
+  
+  .vertical-line {
+      border-left: 1px solid #000;
+      opacity: 47%;
+      margin-top: 5px;
+      padding-top: 30px;
+      margin-left: 20px;
+      margin-right: 12px;
+      width: 1px;
+      height: 10px; 
+  }
+  
+  .profile img {
+      width: 35px;
+      height: 35px; 
+      border-radius: 50%; 
+      object-fit: cover;
+      margin: 8px 0 0 5px;
+  }
+  
+  /* Reste du CSS pour les autres éléments du contenu de la mat-sidenav-content */
+  

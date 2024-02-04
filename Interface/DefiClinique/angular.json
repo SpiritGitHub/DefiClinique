@@ -6,28 +6,34 @@
     "DefiClinique": {
       "projectType": "application",
       "schematics": {},
-      "root": "",
-      "sourceRoot": "src",
+      "root": "projects/defi-clinique",
+      "sourceRoot": "projects/defi-clinique/src",
       "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
             "outputPath": "dist/defi-clinique",
-            "index": "src/index.html",
-            "browser": "src/main.ts",
+            "index": "projects/defi-clinique/src/index.html",
+            "browser": "projects/defi-clinique/src/main.ts",
             "polyfills": [
               "zone.js"
             ],
-            "tsConfig": "tsconfig.app.json",
+            "tsConfig": "projects/defi-clinique/tsconfig.app.json",
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              "projects/defi-clinique/src/favicon.ico",
+              "projects/defi-clinique/src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "projects/defi-clinique/src/custom-theme.scss",
+              "projects/defi-clinique/src/styles.css"
             ],
-            "scripts": []
+            "scripts": [],
+            "server": "projects/defi-clinique/src/main.server.ts",
+            "prerender": true,
+            "ssr": {
+              "entry": "projects/defi-clinique/server.ts"
+            }
           },
           "configurations": {
             "production": {
@@ -78,18 +84,21 @@
               "zone.js",
               "zone.js/testing"
             ],
-            "tsConfig": "tsconfig.spec.json",
+            "tsConfig": "projects/defi-clinique/tsconfig.spec.json",
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              "projects/defi-clinique/src/favicon.ico",
+              "projects/defi-clinique/src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "projects/defi-clinique/src/styles.css"
             ],
             "scripts": []
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "faec380d-0f5c-417e-bc04-7b9be79f0373"
   }
 }

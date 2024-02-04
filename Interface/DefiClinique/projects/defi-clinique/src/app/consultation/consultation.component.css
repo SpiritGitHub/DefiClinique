@@ -1,0 +1,128 @@
+.general{
+  display: flex;
+  position: fixed;
+  margin-left: 1065px;
+  margin-top: -1535px;
+}
+.patient-info-container {
+    background: rgba(239, 239, 239, 1);
+    padding: 0px 45px  5px 45px;
+    width: 975px;
+    height: 570px;
+    margin-top: 65px;
+    margin-bottom: 40px;
+    margin-left: -1065px;
+  }
+  .haut{
+    display: flex;
+  }
+  .profil{
+    height: 150px;
+    width: 200px;
+    margin-top:30px;
+    margin-left: 15px;
+  }
+  .profil img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-left: 20px;
+    object-fit: cover;
+    
+  }
+  .cote1{
+    margin-left: 30px;
+  }
+  .cote2{
+    margin-left: 180px;
+  }
+  .form-container {
+    width: 700px;
+    margin-left: 100px;
+  }
+  
+  form{
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  .form-group input {
+    width: 150%;
+    height: 30px;
+    border-radius: 4px;
+    background-color: rgba(169, 168, 168, 1);
+    border: 1px solid #ddd;
+    box-sizing: border-box; /* Makes sure the padding does not affect the overall width */
+  }
+  
+  .container {
+    margin-bottom: 20px;
+    width: 1090px;
+  }
+
+  .container .prescriptions{
+    margin-left: 11px;
+  }
+  .container .prescriptions textarea{
+    width: 98.5%;
+  }
+  .container textarea{
+    width: 70%;
+    height: 60px;
+    margin-top: -15px;
+    resize: none;
+  }
+ 
+  .form-group {
+    margin-bottom: 10px;
+  }
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  input[type="text"], textarea {
+    width: 10%;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  .half-width {
+    width: 48%;
+    margin-right: 4%;
+  }
+
+  .half-width input {
+    float: left;
+    width: 40%;
+  }
+  .half-width textarea {
+    float: left;
+    height: 90px;
+    width: 100%;
+    margin-left: 500px;
+    margin-top: -100px;
+    resize: none;
+  }
+  
+ 
+  .half-width:last-child {
+    margin-right: 0;
+  }
+  .clear {
+    clear: both;
+  }
+
+  .dernier{
+    display: flex;
+    margin: -25px 0px 35px 0;
+    width: 100%;
+    height: 20%;
+    margin-top: -100px;
+  }

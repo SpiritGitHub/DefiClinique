@@ -1,0 +1,83 @@
+<div class="facturation">
+    <div class="dep-img">
+        <img src="../../assets/facture.png">
+        <div class="fac">Facturation</div>
+    </div>
+    
+    <div class="facture">
+        <div class="tête">
+            <div class="clinique">
+                <img src="../../assets/Heart.png">
+                <div class="fac">Non de la clinique</div>
+            </div>
+            <div class="num-f">
+                <div class="dep-add">Facture N*:  </div>
+                <table>
+                    <tr *ngFor="let item of dataSource">
+                        <td>{{ item.numero }}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="date">
+            <div class="dep-add">Date:</div>
+            <table>
+                <tr *ngFor="let item of dataSource">
+                    <td>{{ item.numero }}</td>
+                </tr>
+            </table>
+        </div>
+    
+        <div class="num-p">
+            <div class="dep-add">Patient N*:</div>
+            <table>
+                <tr *ngFor="let item of dataSource">
+                    <td>{{ item.numero }}</td>
+                </tr>
+            </table>
+        </div>
+    
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th></th> <!-- Colonne pour les checkboxes -->
+                        <th>Nom</th>
+                        <th>Prénom</th>
+                        <th>Doc Num</th>
+                        <th>Spécialités</th>
+                        <th>Mot de Passe</th>
+                        <th>Prix</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let data of dataSource2; let i = index">
+                        <td><input type="checkbox" [id]="'check-' + i" [(ngModel)]="data.selected"></td>
+                        <td>{{ data.nom }}</td>
+                        <td>{{ data.prenom }}</td>
+                        <td>{{ data.docNum }}</td>
+                        <td class="spécialité">{{ data.specialites }}</td>
+                        <td class="password-cell">{{ data.motDePasse }}</td>
+                        <td>{{ data.departements }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="add" >
+            <a href="">
+                <i class="ri-add-line"></i> Add Service
+            </a>
+        </div>
+        
+        <div class="total">
+            <div class="dep-add">Total:  </div>
+            <table>
+                <tr *ngFor="let item of dataSource">
+                    <td>{{ item.numero }}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+

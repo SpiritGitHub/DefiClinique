@@ -1,0 +1,101 @@
+<div class="urgences-content">
+    <div class="retou">
+        <a href="dashboard/departement" class="sidebar-back">
+            <i class="ri-arrow-left-line"></i> <span>Departements</span>
+        </a>
+    </div>
+    
+    <div class="dep-img">
+        <img src="../../../assets/Tie.png">
+        <div class="dash">Administration</div>
+    </div>
+
+    <div class="infos-dep">
+        <div class="chef">
+            <div class="titre">Chef du département: </div>
+            <table>
+                <tr *ngFor="let item of dataSource">
+                    <td>{{ item.nom }}</td>
+                    <td>{{ item.prenom }}</td>
+                </tr>
+            </table>
+        </div>
+        <div class="dep">
+            <div class="dep-add">Coordonnées du département: </div>
+            <table>
+                <tr *ngFor="let item of dataSource">
+                    <td>{{ item.nom }}</td>
+                    <td>{{ item.prenom }}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="personnel">
+        <div class="pers">
+            <div class="titre">Personnel médical : </div>
+            <table>
+                <tr *ngFor="let item of dataSource">
+                    <td>{{ item.nom }}</td>
+                    <td>{{ item.prenom }}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th></th> <!-- Colonne pour les checkboxes -->
+                    <th>Nom</th>
+                    <th>Prénom</th>
+                    <th>Doc Num</th>
+                    <th>Spécialités</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let data of dataSource2; let i = index">
+                    <td><input type="checkbox" [id]="'check-' + i" [(ngModel)]="data.selected"></td>
+                    <td>{{ data.nom }}</td>
+                    <td>{{ data.prenom }}</td>
+                    <td>{{ data.docNum }}</td>
+                    <td class="spécialité">{{ data.specialites }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="graph">
+        <div class="titre">Rapports financiers</div>
+        <div class="graphique">
+            <!-- circular-chart.component.html-->
+            <div class="graph" style="display: block; width: 110px; height: 110px;">
+                <canvas baseChart
+                    [type]="chartType"
+                    [data]="chartData"
+                    [options]="chartOptions">
+                </canvas>
+            </div>
+            <div class="limit-line"></div>
+            <div class="legende">
+                <div class="head">Légende</div>
+                <div class="leg">
+                    <div class="blue-line"></div>
+                    <p>Revenus générés<br>par le département.</p>
+                    <div class="yellow-line"></div>
+                    <p>Salaire du<br>personnel médicale.</p>
+                    <div class="red-line"></div>
+                    <p>Coûts opérationnels<br>et budgétaires.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="rating">
+        <p class="texte">Satisfaction des patients:</p>
+        <mat-icon
+          *ngFor="let star of stars; let i = index"
+          (click)="rate(i + 1)"
+          [style.color]="i < currentRate ? 'gold' : 'gray'"
+          >star</mat-icon
+        >
+        <p>Rating: {{ currentRate }} / 5</p>
+      </div>
+</div>
