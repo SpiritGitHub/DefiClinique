@@ -1,0 +1,137 @@
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+<section class="dash">
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <a href="home-P" class="sidebar-back">
+                <i class="ri-arrow-left-line"></i> home
+            </a>
+        </div>
+
+        <h3>Menu</h3>
+        <nav class="nav-menu">
+            <ul>
+                <li class="nav-item">
+                    <a href="home-P">
+                        <i class="ri-dashboard-line"></i> Dashboard
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="dashboard-P">
+                        <i class="ri-stethoscope-line"></i> Patients Ma...
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a href="prescriptions">
+                        <i class="ri-medicine-bottle-line"></i> Prescription
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="labo">
+                        <i class="ri-microscope-line"></i> Laboratoire
+                    </a>
+                </li>
+                <li class="nav-item active">
+                    <a href="appointment">
+                        <i class="ri-contacts-book-line"></i> Rendez-vous
+                    </a>
+                </li>
+            </ul>
+            <div class="setting">
+                <hr class="h">
+                <div class="nav-item">
+                    <a href="#">
+                        <i class="ri-settings-3-line"></i> Paramètres
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <div class="sidebar-footer">
+            <a href="#" class="sidebar-logo">
+                <img src="../../assets/+LO GO.png" alt="Logo"><span>App Name</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="dashboard">
+            <span>Dashboard</span>
+            <div class="search-bar">
+            <input type="search" placeholder="search medical records...">
+            <i (click)="search()" class="ri-search-2-line"></i>
+            </div>
+            <div class="message">
+            <i class="ri-message-2-line"></i>
+            </div>
+            <div class="vertical-line">
+            </div>
+            <div class="profile">
+            <img src="../../assets/Downloader.la-61952a60a8464-770x535.jpeg">
+            </div>
+    </div>
+
+    <!-- schedule.component.html -->
+    <div class="schedule-container">
+        <div class="schedule-section">
+            <div class="section-title">Matin</div>
+            <div class="time-slots">
+                <!-- Générer dynamiquement les créneaux du matin -->
+                <div *ngFor="let time of morningSlots" 
+                    class="time-slot" 
+                    [ngClass]="{'selected': selectedSlot === time}"
+                    (click)="selectSlot(time)">
+                {{ time }}
+                </div>
+            </div>
+        </div>
+    
+        <div class="schedule-section">
+        <div class="section-title">Après-midi / Soir</div>
+        <div class="time-slots">
+            <!-- Générer dynamiquement les créneaux de l'après-midi -->
+            <div *ngFor="let time of afternoonSlots" 
+                class="time-slot" 
+                [ngClass]="{'selected': selectedSlot === time}"
+                (click)="selectSlot(time)">
+            {{ time }}
+            </div>
+        </div>
+        </div>
+    </div>
+
+
+    <!-- buttons.component.html -->
+    <div class="button-group">
+        <button class="btn apply-btn">Appliquer</button>
+        <span class="divider" (click)="onCancel()">ou Annuler</span>
+    </div>
+    <!--calendar.component.html-->
+     
+    <div class="calendar-container">
+        <div class="calendar-header">
+          <button (click)="previousMonth()"><i class="ri-arrow-left-s-line"></i></button>
+          <span>{{ currentMonth | date: 'MMMM' }}</span>
+          <button (click)="nextMonth()"><i class="ri-arrow-right-s-line"></i></button>
+        </div>
+        <div class="calendar-grid">
+          <div class="day-name" *ngFor="let dayName of dayNames">{{ dayName }}</div>
+          <div class="day" *ngFor="let day of calendarDays" [class.is-today]="day.isToday">
+            {{ day.date | date: 'd' }}
+          </div>
+        </div>
+    </div>
+
+    <!-- date-time-display.component.html -->
+    <div class="date-time-container">
+        <div class="date">Jeudi 16 janvier 2020</div>
+        <div class="time">11h00</div>
+    </div>
+  
+    <div class="select-datetime">
+        <button class="date-btn" (click)="selectDate()">Sélectionner la date</button>
+        <button class="time-btn" (click)="selectTime()">Sélectionner l'heure</button>
+    </div>
+      
+  
+  
+  
+</section>

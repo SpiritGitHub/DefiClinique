@@ -1,0 +1,136 @@
+.facturation{
+ margin-top: -1600px;
+}
+.dep-img{
+    align-items: center;
+    display: flex;
+    margin: 60px 0px 0px 45px;
+}
+.clinique{
+    align-items: center;
+    display: flex;
+    margin: 20px 0px 0px 0px;
+}
+
+.dep-img img{
+    height: 40px;
+    
+}
+
+.tête{
+    display: flex;
+}
+
+.clinique img{
+    height: 30px;
+    
+}
+.clinique .fac{
+    margin: 15px 0 0 10px;
+    font-size: 25px;
+    color: rgba(0, 16, 57, 1);
+}
+.dep-img .fac{
+    margin: 15px 0 0 10px;
+    font-size: 25px;
+    color: rgba(0, 16, 57, 1);
+}
+
+.num-f{
+    display: flex;
+    align-items: center;
+    margin: 15px 0 0 560px;
+    color: rgba(0, 16, 57, 1);
+}
+
+.facture{
+    width: 96.7%;
+    background: rgba(239, 239, 239, 1);
+    padding: 5px 5px 50px 45px;
+    margin: 20px 0 0 0;
+}
+.date{
+    display: flex;
+    align-items: center;
+    margin-left: 844px;
+    color: rgba(0, 16, 57, 1);
+}
+
+.dep table{
+    margin: 0 0 0 10px;
+    color: rgba(177, 0, 0, 1);
+}
+
+.date table{
+    color: rgba(0, 155, 43, 1);
+}
+
+.num-p{
+    display: flex;
+    align-items: center;
+    margin: 25px 0px 0px 0px;
+    color: rgba(0, 16, 57, 1);
+}
+
+.table-container {
+    max-height: 260px;
+    margin: 10px 50px 0px 0px;    
+    border: 1px rgb(247, 247, 247);
+}
+
+.table-container table {
+    width: 100%;
+    border-collapse: collapse; /* Supprime l'espacement entre les bordures des cellules */
+}
+.table-container thead {
+    background-color: rgb(247, 247, 247); /* Couleur de fond pour l'en-tête du tableau */
+    color: rgba(20, 0, 100, 1); /* Couleur du texte pour l'en-tête du tableau */
+}
+
+.table-container tbody{
+    max-height: 200px;
+    border-collapse: collapse;
+    background-color: white;
+
+}
+
+.table-container th, td {
+    padding: 8px; /* Espacement à l'intérieur des cellules */
+    text-align: left; /* Alignement du texte à gauche */
+    border-bottom: 1px solid #ddd; /* Ligne de séparation entre les lignes */
+}
+
+
+
+.table-container tr:hover {
+    background-color: #ddd; /* Couleur de fond au survol d'une ligne */
+}
+
+.table-container input[type="checkbox"] {
+    margin-left: 10px; /* Espacement pour la case à cocher */
+}
+
+/* Ajout de styles supplémentaires pour les boutons et les inputs si nécessaire */
+.table-container input[type="text"], input[type="number"], select {
+    padding: 5px;
+    margin: 2px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.add{
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.add a{
+    text-decoration: none;
+    margin: 0px 0 15px 55px;
+    color: rgba(0, 16, 57, 1);
+}
+.total{
+    display: flex;
+    align-items: center;
+    margin: 15px 0 0 730px;
+    color: rgba(0, 16, 57, 1);
+}

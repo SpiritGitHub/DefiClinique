@@ -1,0 +1,71 @@
+
+mat-toolbar {
+    position: relative;
+    color: rgba(234, 234, 234, 1);
+    z-index:  5;
+}
+
+
+button .icon {
+    display: flex;
+    align-items: center;
+}
+
+button .icon i {
+    color: rgba(20, 0, 100, 1);
+    outline: none;
+}
+
+.loupe-button {
+    margin-left: 60px; /* Ajustez selon votre besoin */
+}
+
+.message-button{
+    left: 820px;
+}
+
+form .field input {
+    color: rgba(0, 16, 57, 0.26);
+    opacity: 26%;
+    outline: none;
+    border: none;
+    background: none;
+    font-size: 15px;
+    font-family: Geomanist, 'Times New Roman', Times, serif;
+}
+
+.vertical-line {
+    width: 1px;
+    height: 45px;
+    background-color: #000;
+    position: relative;
+    left: 835px;
+    opacity: 47%;
+}
+
+.img img{
+    height: 35px;
+    width: 35px;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    margin-left: 855px;
+}
+
+mat-sidenav-container mat-sidenav{
+    background-color: rgba(234, 234, 234, 1);
+}
+
+mat-sidenav-container .content {
+    padding-top: 70px;
+    padding-left: 110px;
+    font-family: Geomanist, 'Times New Roman', Times, serif;
+    font-size: 35px;
+    color: rgba(3, 1, 91, 1);
+}
+
+mat-sidenav-container {
+    height: 90.5vh;
+    background-color: white;
+}
+

@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz@0,8..144;1,8..144&display=swap');
+.tout {
+  display: flex;
+  position: fixed;
+  width: 900px;
+  height: 600px;
+  margin-left: -40px;
+  margin-top: -1488px;
+}
+
+.info {
+  margin-left: 40px;
+  margin-top: 10px;
+  width: 720px;
+  height: 200px;
+  background: linear-gradient(to right, rgba(0, 41, 255, 1), rgba(30, 211, 1, 0.6));
+}
+
+.info span {
+font-size: 20px;
+font-family: 'Arvo', serif;
+color: #fff;
+position: relative;
+font-weight: bold;
+top: 10px;
+margin-left: 30px;
+}
+
+h2 {
+font-size: 40px;
+font-family: 'Roboto Serif', serif;
+color: #fff;
+position: relative;
+top: 0px;
+margin-left: 30px;
+}
+
+.B {
+width: 361px;
+height: 1.8px;
+background: linear-gradient(90deg, rgba(255, 255, 255, 0.00) 0%, #FFF 13.02%, rgba(255, 255, 255, 0.00) 100%);
+position: relative;
+top: 0px;
+border: none;
+margin: -15px 0 5px 0;
+}
+
+p {
+font-size: 12px;
+width: 558px;
+font-family: 'Roboto Serif', serif;
+color: #fff;
+position: relative;
+top: 0px;
+color: #FFF;
+margin: 15px 0 0 30px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+.dashboard-content { 
+margin-left: 250px; 
+width: 938px; 
+height: 323px; 
+object-fit: cover; 
+} 
+
+
+.image img{ 
+height: 200px; 
+width: 600px; 
+object-fit: cover; 
+padding: 45px; 
+top: 20%; 
+
+} 
+
+.message-overlay { 
+position: absolute; 
+width: 500px; 
+top: 43px; 
+bottom: 430px; 
+left: 44%; 
+transform: translateX(-50%); 
+background-color: rgba(0, 0, 0, 0);  
+color: white; 
+padding: 45px; 
+text-align: center; 
+ 
+ 
+
+} 
+
+.menup{ 
+display: flex; 
+padding-left: 240px;  
+width: 500px; 
+margin-top: 230px;
+margin-left: -180px;
+position: fixed;
+} 
+
+.box{ 
+align-items: center; 
+cursor: pointer; 
+padding: 15px; 
+padding-top: 0; 
+margin-left: -20px;
+} 
+
+.box .text{ 
+align-items: center; 
+display: flex; 
+font-size: 20px; 
+padding: 20px 44px 20px 44px; 
+background: rgba(239, 239, 239, 1);
+margin-left: -10px;
+} 
+ 
+ 
+img { 
+  height: 70px; 
+  width: 70px; 
+  padding-right: 15px;
+  object-fit: cover; 
+}
+
+  
+.doctors-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: -5px;
+  padding: 20px;
+  margin-top: 450px;
+  margin-left: -769px;
+  height: 25px;
+}
+
+  .doctor-card {
+    background-color: rgba(239, 239, 239, 1);
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    width: 180px;
+    margin-left: 30px;
+  }
+  
+  .doctor-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    object-fit: cover;
+  }
+ 
+  .doctor-card h3 {
+    margin: 0;
+    font-size: 19px;
+    font-family: 'Arvo', serif;
+  }
+  
+  .doctor-card p {
+    margin: 5px -220px;
+    font-size: 14px;
+    color: green;
+  }
+
+  .calendrier{
+    background-color:rgba(239, 239, 239, 1);
+    width: 350px;
+    height: 575px;    
+   margin-left: 700px;
+   margin-top: 15px;
+   position: fixed;
+   
+ }
+ .rdv{
+  margin-top: 30px;
+ }
+ .profil{
+  background-color:white;
+  width: 250px;
+  height: 100px;
+  margin-top: -20px;
+  margin-left: 40px;
+  position: fixed;
+}
+.cadre img{
+  margin-top: 15px;
+  margin-left: -10px;
+  object-fit: cover;
+}
+.cadre{
+  padding-top:10px;
+  padding-left: 30px;  
+}
+
+h4{
+  font-family: 'Arvo', serif;
+  font-size: 20px;
+  margin-left: 90px;
+  margin-top: -60px;
+}
+h5{
+  margin-top: -15px;
+  color: green;
+  font-size: 15px;
+  margin-left: 90px;
+  
+}
+.cadre p{
+  color:black;
+  margin-top: -110px;
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+.profil1{
+  background-color:white;
+  width: 250px;
+  height: 100px;
+  margin-top: 90px;
+  margin-left: 40px;
+  position: fixed;
+}
+
+.profil2{
+  background-color:white;
+  width: 250px;
+  height: 100px;
+  margin-top: 205px;
+  margin-left: 40px;
+  position: fixed;
+}
+.calendrier{
+  background-color: rgba(239, 239, 239, 1);
+  width: 325px;
+  height: 608px;    
+  margin-left: 780px;
+  margin-top: 10px;
+  position: fixed;
+  border-radius: 0 0 20px 0;
+ }
+ .calendar{
+  margin-left: 50px;
+ }

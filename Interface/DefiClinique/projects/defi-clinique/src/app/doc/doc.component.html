@@ -1,0 +1,109 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+<div class="tout">
+    
+    <div class="info">
+        <br>
+        <span>Welcome</span>
+        <h2>Ms John DOE</h2>
+        <hr class="B">
+        <p>Lorem ipsum dolor sit amet consectetur. Risus hendrerit amet elementum proin accumsan. non id enim faucibus vel ac tincidunt.</p>
+    </div>
+    <div class="menup"> 
+        <div class="box"> 
+            <div class="card"> 
+                <div class="box"> 
+                    <div class="text"> 
+                        <img src="../../assets/calendar.png"> 
+                        <div class="dashM">6<br>Appoit</div> 
+                    </div> 
+                </div> 
+            </div> 
+        </div> 
+        <div class="box"> 
+            <div class="card"> 
+                <div class="box"> 
+                    <div class="text"> 
+                        <img src="../../assets/Siren.png"> 
+                        <div class="Doc">3<br>Urgent ALert</div> 
+                    </div> 
+                </div> 
+            </div> 
+        </div> 
+        <div class="box"> 
+            <div class="card"> 
+                <div class="box"> 
+                    <div class="text"> 
+                        <img src="./assets/Microscope.png"> 
+                        <div class="Dep">4<br>Ready Results</div> 
+                    </div> 
+                </div> 
+            </div> 
+        </div> 
+    </div>
+    <div class="calendrier">
+        <div class="calendar" style="width: 210px">
+            <mat-calendar></mat-calendar>
+        </div>
+
+        <div class="profil">
+              <div class="cadre">
+                <img src="./assets/Rectangle26.jpg" alt=""> 
+                <h4>Dr Joe Dane</h4>
+                 <h5>Speciality</h5>
+                 <p>7h40</p>
+            </div>
+        </div>
+        <div class="profil1">
+            <div class="cadre">
+                <img  src="./assets/Rectangle28.jpg" alt=""> 
+                 <h4>Dr Joe Dane</h4>
+                 <h5>Speciality</h5>
+                 <p>7h40</p>
+            </div>
+            
+        </div>
+    </div>
+    
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th></th> <!-- Colonne pour les checkboxes -->
+                    <th>Nom</th>
+                    <th>Prénom</th>
+                    <th>NumP</th>
+                    <th>Etat</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let data of dataSource; let i = index">
+                    <td><input type="checkbox" [id]="'check-' + i" [(ngModel)]="data.selected"></td>
+                    <td>{{ data.nom }}</td>
+                    <td>{{ data.prenom }}</td>
+                    <td>{{ data.docNum }}</td>
+                    <td class="specialite">
+                        {{ data.specialites }}
+                        <span [ngClass]="{
+                            'status-complete': data.specialites.toLowerCase() === 'complet', 
+                            'status-en-cours': data.specialites.toLowerCase() === 'en cours'
+                          }"></span>                      </td>
+                    <td>
+                        <div class="bouton">
+                            <button (click)="onEdit(data)">
+                                <i class="fas fa-edit" style="color: green;"></i>
+                              </button>
+                              <!-- Bouton pour supprimer les informations du patient -->
+                              <button (click)="onDelete(data)">
+                                <i class="fas fa-trash" style="color: red;"></i>
+                              </button>
+                        </div>
+                      
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
