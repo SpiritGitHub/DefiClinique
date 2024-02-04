@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Optional;
 
 @RequestMapping("clinique")
@@ -25,6 +26,12 @@ public class personelControler {
                 .map(ResponseEntity::ok)
                 .orElseGet(() -> ResponseEntity.notFound().build());
     }
+
+    @GetMapping("/alldepartements")
+    public List<Personnel> getAllPersonnel() {
+        return personnelService.getAllPersonnel();
+    }
+
 
     @PostMapping("/createpersonnel")
     public Personnel createDossier(@RequestBody Personnel dossier) {

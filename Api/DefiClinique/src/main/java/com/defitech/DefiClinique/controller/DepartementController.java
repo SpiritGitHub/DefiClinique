@@ -19,24 +19,24 @@ public class DepartementController {
         this.departementService = departementService;
     }
 
-    @GetMapping
+    @GetMapping("/alldepartements")
     public List<Departement> getAllDepartements() {
         return departementService.getAllDepartements();
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("departement/{id}")
     public ResponseEntity<Departement> getDepartementById(@PathVariable Long id) {
         return departementService.getDepartementById(id)
                 .map(ResponseEntity::ok)
                 .orElseGet(() -> ResponseEntity.notFound().build());
     }
 
-    @PostMapping
+    @PostMapping("addDepartements")
     public Departement addDepartement(@RequestBody Departement departement) {
         return departementService.saveDepartement(departement);
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("udateDepartement/{id}")
     public ResponseEntity<?> deleteDepartement(@PathVariable Long id) {
         departementService.deleteDepartement(id);
         return ResponseEntity.ok().build();

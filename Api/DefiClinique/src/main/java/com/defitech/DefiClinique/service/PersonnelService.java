@@ -6,6 +6,7 @@ import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Data
@@ -20,6 +21,9 @@ public class PersonnelService {
     }
     public Iterable<Personnel> getPersonnel(){
         return personnelRepository.findAll();
+    }
+    public List<Personnel> getAllPersonnel() {
+        return (List<Personnel>) personnelRepository.findAll();
     }
 
     public void deletePersonnel(final Long id){
