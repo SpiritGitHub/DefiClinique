@@ -9,6 +9,7 @@ public class PersonnelDTO {
     private Integer docnum;
     private String specialite;
     private String motdepasse;
+    private Long idDepartement;
     private String nomDepartement;
 
 }
