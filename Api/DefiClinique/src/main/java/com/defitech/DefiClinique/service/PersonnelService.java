@@ -30,8 +30,8 @@ public class PersonnelService {
         personnel.setDocnum(personnelDTO.getDocnum());
         personnel.setSpecialite(personnelDTO.getSpecialite());
         personnel.setMotdepasse(personnelDTO.getMotdepasse());
-        if (personnelDTO.getNomDepartement() != null) {
-            Departement departement = departementRepository.findByNomDepartement(personnelDTO.getNomDepartement()).orElse(null);
+        if (personnelDTO.getIdDepartement() != null) {
+            Departement departement = departementRepository.findById(personnelDTO.getIdDepartement()).orElse(null);
             personnel.setDepartement(departement);
         }
         return personnel;
