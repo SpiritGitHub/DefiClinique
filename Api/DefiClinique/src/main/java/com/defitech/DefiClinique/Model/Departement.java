@@ -24,6 +24,4 @@ public class Departement {
     private String description;
     private int nombreEmployes;
 
-    @OneToMany(mappedBy = "departement", fetch = FetchType.LAZY)
-    private List<Personnel> personnels;
 }
