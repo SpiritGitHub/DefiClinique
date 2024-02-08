@@ -1,55 +1,40 @@
-import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { DepartementService } from '../../services/departement.service'; // Vérifiez que le chemin est correct
+import { Departement } from '../../models/departement.model'; // Importez le modèle
 
 @Component({
   selector: 'app-add-dep',
+  templateUrl: './add-dep.component.html',
+  styleUrls: ['./add-dep.component.css'],
   standalone: true,
   imports: [
     CommonModule,
     FormsModule
-  ],
-  templateUrl: './add-dep.component.html',
-  styleUrl: './add-dep.component.css'
+  ]
 })
 export class AddDepComponent {
-
-  departmentData = {
+  departmentData: Departement = {
     departmentName: '',
     departmentAddress: '',
     departmentDescription: ''
-    // Ajoutez d'autres propriétés si nécessaire
   };
 
-  selectedFile: File | null = null;
-
-  onFileSelected(event: any): void {
-    const file: File = event.target.files[0];
-    this.selectedFile = file;
-  }
+  constructor(private departementService: DepartementService) {}
 
   onSubmit() {
-    // Ici, vous pouvez envoyer les données du formulaire au service ou au backend
-    // pour enregistrement en base de données. Assurez-vous d'injecter le service requis.
-    // Par exemple, vous pouvez utiliser un service Angular pour effectuer une requête HTTP.
-
-    // Envoie des données au service ou backend, y compris le fichier
-   // console.log('Envoi des données :', this.departmentData);
-    //console.log('Fichier sélectionné :', this.selectedFile);
-
-    // Réinitialise les données après l'envoi
-    this.resetForm();
+    // Assurez-vous que les champs requis ne sont pas vides
+    if (this.departmentData.departmentName && this.departmentData.departmentAddress) {
+      // Utilisez le nom correct de la méthode telle que définie dans le service
+      this.departementService.addDepartement(this.departmentData).subscribe({
+        next: (data) => {
+          console.log('Département ajouté', data);
+          // Optionnel: Réinitialiser le formulaire ou gérer la navigation après succès
+        },
+        error: (error) => console.error('Erreur', error)
+        // Gérer les erreurs potentielles
+      });
+    }
   }
-
-  resetForm() {
-    // Réinitialise les données du formulaire après soumission
-    this.departmentData = {
-      departmentName: '',
-      departmentAddress: '',
-      departmentDescription: ''
-      // Réinitialisez d'autres propriétés si nécessaire
-    };
-    this.selectedFile = null;
-  }
-
 }

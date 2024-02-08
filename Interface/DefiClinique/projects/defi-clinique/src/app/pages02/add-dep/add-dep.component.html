@@ -19,11 +19,11 @@
           <textarea id="departmentDescription" name="departmentDescription" [(ngModel)]="departmentData.departmentDescription"></textarea>
         </div>
       
-        <div class="form-group">
+       <!-- <div class="form-group">
           <label for="departmentIcon">Icône du Département:</label>
           <input type="file" id="departmentIcon" name="departmentIcon" (change)="onFileSelected($event)">
           <small *ngIf="selectedFile">Fichier sélectionné : {{ selectedFile.name }}</small>
-        </div>
+        </div>-->
       
         <button type="submit" [disabled]="departementForm.invalid">Enregistrer</button>
       </form>

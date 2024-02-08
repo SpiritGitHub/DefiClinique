@@ -17,11 +17,11 @@ public class Personnel {
 
         private String nom;
         private String prenom;
-        private int docnum;
+        private Integer docnum;
         private String specialite;
         private String motdepasse;
 
-        @ManyToOne(fetch = FetchType.LAZY)
+        @ManyToOne()
         @JoinColumn(name = "departement_id")
         private Departement departement;
     }

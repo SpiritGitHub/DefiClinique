@@ -33,5 +33,10 @@ public class DepartementService {
         departementRepository.deleteById(id);
     }
 
+    public Departement getOrSaveDepartementByName(String nomDepartement) {
+        return departementRepository.findByNomDepartement(nomDepartement)
+                .orElseGet(() -> departementRepository.save(new Departement()));
+    }
+
 }
 
