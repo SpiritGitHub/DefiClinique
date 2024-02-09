@@ -1,8 +1,10 @@
 package com.defitech.DefiClinique.controller;
 
+import com.defitech.DefiClinique.Model.Personnel;
 import com.defitech.DefiClinique.Model.PersonnelDTO;
 import com.defitech.DefiClinique.service.PersonnelService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,8 +18,13 @@ public class personelControler {
 
     @PostMapping("/createpersonnel")
     public ResponseEntity<PersonnelDTO> ajouterPersonnel(@RequestBody PersonnelDTO personnelDTO) {
-        PersonnelDTO nouveauPersonnel = personnelService.ajouterPersonnel(personnelDTO);
-        return ResponseEntity.ok(nouveauPersonnel);
+        try {
+            Personnel personnel = personnelService.ajouterPersonnel(personnelDTO);
+            PersonnelDTO responseDTO = personnelService.entityToDto(personnel);
+            return new ResponseEntity<>(responseDTO, HttpStatus.CREATED);
+        } catch (RuntimeException e) {
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
     }
     @GetMapping("/allpersonnel")
     public ResponseEntity<List<PersonnelDTO>> listerTousLesPersonnels() {
@@ -47,5 +54,10 @@ public class personelControler {
     public ResponseEntity<Void> supprimerPersonnel(@PathVariable Long id) {
         personnelService.supprimerPersonnel(id);
         return ResponseEntity.ok().build();
+    }
+    @GetMapping("/allPerso")
+    public ResponseEntity<List<PersonnelDTO>> getAllPersonnel() {
+        List<PersonnelDTO> personnelList = personnelService.getAllPersonnelWithDepartementName();
+        return ResponseEntity.ok(personnelList);
     }
 }

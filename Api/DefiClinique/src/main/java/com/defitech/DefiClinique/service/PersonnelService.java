@@ -13,6 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
+import java.util.stream.StreamSupport;
 
 @Data
 @Service
@@ -23,6 +24,7 @@ public class PersonnelService {
 
     @Autowired
     private DepartementRepository departementRepository;
+
     private Personnel dtoToEntity(PersonnelDTO personnelDTO) {
         Personnel personnel = new Personnel();
         personnel.setNom(personnelDTO.getNom());
@@ -37,7 +39,7 @@ public class PersonnelService {
         return personnel;
     }
 
-    private PersonnelDTO entityToDto(Personnel personnel) {
+    public PersonnelDTO entityToDto(Personnel personnel) {
         PersonnelDTO dto = new PersonnelDTO();
         dto.setNom(personnel.getNom());
         dto.setPrenom(personnel.getPrenom());
@@ -50,10 +52,22 @@ public class PersonnelService {
         return dto;
     }
 
-    public PersonnelDTO ajouterPersonnel(PersonnelDTO personnelDTO) {
-        Personnel personnel = dtoToEntity(personnelDTO);
-        personnel = personnelRepository.save(personnel);
-        return entityToDto(personnel);
+    public Personnel ajouterPersonnel(PersonnelDTO personnelDTO) {
+        Personnel personnel = new Personnel();
+
+        if (personnelDTO.getIdDepartement() != null) {
+            Departement departement = departementRepository.findById(personnelDTO.getIdDepartement()).orElseThrow(
+                    () -> new RuntimeException("Département non trouvé avec l'id : " + personnelDTO.getIdDepartement())
+            );
+            personnel.setDepartement(departement);
+        } else if (personnelDTO.getNomDepartement() != null) {
+            Departement departement = departementRepository.findByNomDepartement(personnelDTO.getNomDepartement()).orElseThrow(
+                    () -> new RuntimeException("Département non trouvé avec le nom : " + personnelDTO.getNomDepartement())
+            );
+            personnel.setDepartement(departement);
+        }
+
+        return personnelRepository.save(personnel);
     }
 
     public List<PersonnelDTO> listerTousLesPersonnels() {
@@ -76,6 +90,14 @@ public class PersonnelService {
             return entityToDto(personnel);
         }
         return null;
+    }
+
+    public List<PersonnelDTO> getAllPersonnelWithDepartementName() {
+        Iterable<Personnel> allPersonnel = personnelRepository.findAll();
+
+        return StreamSupport.stream(allPersonnel.spliterator(), false)
+                .map(this::entityToDto)
+                .collect(Collectors.toList());
     }
     public void supprimerPersonnel(Long id) {
         personnelRepository.deleteById(id);
