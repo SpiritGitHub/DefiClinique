@@ -55,15 +55,19 @@ public class PersonnelService {
     public Personnel ajouterPersonnel(PersonnelDTO personnelDTO) {
         Personnel personnel = new Personnel();
 
+        personnel.setNom(personnelDTO.getNom());
+        personnel.setPrenom(personnelDTO.getPrenom());
+        personnel.setDocnum(personnelDTO.getDocnum());
+        personnel.setSpecialite(personnelDTO.getSpecialite());
+        personnel.setMotdepasse(personnelDTO.getMotdepasse());
+
         if (personnelDTO.getIdDepartement() != null) {
-            Departement departement = departementRepository.findById(personnelDTO.getIdDepartement()).orElseThrow(
-                    () -> new RuntimeException("Département non trouvé avec l'id : " + personnelDTO.getIdDepartement())
-            );
+            Departement departement = departementRepository.findById(personnelDTO.getIdDepartement())
+                    .orElseThrow(() -> new RuntimeException("Département non trouvé avec l'id : " + personnelDTO.getIdDepartement()));
             personnel.setDepartement(departement);
         } else if (personnelDTO.getNomDepartement() != null) {
-            Departement departement = departementRepository.findByNomDepartement(personnelDTO.getNomDepartement()).orElseThrow(
-                    () -> new RuntimeException("Département non trouvé avec le nom : " + personnelDTO.getNomDepartement())
-            );
+            Departement departement = departementRepository.findByNomDepartement(personnelDTO.getNomDepartement())
+                    .orElseThrow(() -> new RuntimeException("Département non trouvé avec le nom : " + personnelDTO.getNomDepartement()));
             personnel.setDepartement(departement);
         }
 

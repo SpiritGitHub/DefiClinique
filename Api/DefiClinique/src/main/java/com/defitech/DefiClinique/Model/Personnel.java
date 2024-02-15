@@ -25,5 +25,5 @@ public class Personnel {
         @JoinColumn(name = "departement_id")
         private Departement departement;
 
-    }
+}
 
