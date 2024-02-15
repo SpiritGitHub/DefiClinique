@@ -30,10 +30,6 @@ public class Departement {
     @OneToMany(mappedBy = "departement", cascade = CascadeType.ALL, orphanRemoval = true)
     private Set<Personnel> employes = new HashSet<>();
 
-    public void ajouterEmploye(Personnel employe) {
-        employes.add(employe);
-        employe.setDepartement(this);
-    }
 
 
     public void supprimerEmploye(Personnel employe) {

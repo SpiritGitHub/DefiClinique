@@ -28,6 +28,7 @@ public class personelControler {
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
     }
+
     @GetMapping("/allpersonnel")
     public ResponseEntity<List<PersonnelDTO>> listerTousLesPersonnels() {
         List<PersonnelDTO> personnels = personnelService.listerTousLesPersonnels();

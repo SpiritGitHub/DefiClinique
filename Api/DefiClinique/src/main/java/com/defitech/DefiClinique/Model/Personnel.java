@@ -21,9 +21,8 @@ public class Personnel {
         private String specialite;
         private String motdepasse;
 
-        @ManyToOne
-        @JoinColumn(name = "departement_id") 
+        @ManyToOne(fetch = FetchType.LAZY)
+        @JoinColumn(name = "departement_id")
         private Departement departement;
-
 }
 
