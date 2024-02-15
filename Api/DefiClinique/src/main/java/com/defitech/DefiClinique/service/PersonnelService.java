@@ -61,18 +61,23 @@ public class PersonnelService {
         personnel.setSpecialite(personnelDTO.getSpecialite());
         personnel.setMotdepasse(personnelDTO.getMotdepasse());
 
+        Departement departement = null;
         if (personnelDTO.getIdDepartement() != null) {
-            Departement departement = departementRepository.findById(personnelDTO.getIdDepartement())
+            departement = departementRepository.findById(personnelDTO.getIdDepartement())
                     .orElseThrow(() -> new RuntimeException("Département non trouvé avec l'id : " + personnelDTO.getIdDepartement()));
-            personnel.setDepartement(departement);
         } else if (personnelDTO.getNomDepartement() != null) {
-            Departement departement = departementRepository.findByNomDepartement(personnelDTO.getNomDepartement())
+            departement = departementRepository.findByNomDepartement(personnelDTO.getNomDepartement())
                     .orElseThrow(() -> new RuntimeException("Département non trouvé avec le nom : " + personnelDTO.getNomDepartement()));
-            personnel.setDepartement(departement);
+        }
+
+        if (departement != null) {
+            departement.ajouterEmploye(personnel);
+            departementRepository.save(departement);
         }
 
         return personnelRepository.save(personnel);
     }
+
 
     public List<PersonnelDTO> listerTousLesPersonnels() {
         Iterable<Personnel> iterable = personnelRepository.findAll();

@@ -21,8 +21,8 @@ public class Personnel {
         private String specialite;
         private String motdepasse;
 
-        @ManyToOne()
-        @JoinColumn(name = "departement_id")
+        @ManyToOne
+        @JoinColumn(name = "departement_id") 
         private Departement departement;
 
 }
