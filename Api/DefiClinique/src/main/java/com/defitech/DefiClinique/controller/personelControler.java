@@ -6,6 +6,7 @@ import com.defitech.DefiClinique.service.PersonnelService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -19,7 +20,7 @@ public class personelControler {
     private PersonnelService personnelService;
 
     @PostMapping("/createpersonnel")
-    public ResponseEntity<PersonnelDTO> ajouterPersonnel(@RequestBody PersonnelDTO personnelDTO) {
+    public ResponseEntity<PersonnelDTO> ajouterPersonnel( @Validated @RequestBody PersonnelDTO personnelDTO) {
         try {
             Personnel personnel = personnelService.ajouterPersonnel(personnelDTO);
             PersonnelDTO responseDTO = personnelService.entityToDto(personnel);
